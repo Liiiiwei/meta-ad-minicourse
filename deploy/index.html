@@ -2457,10 +2457,12 @@
       // 送出到 ConvertKit
       var btn = form.querySelector('button');
       if (btn) { btn.disabled = true; btn.textContent = '送出中…'; }
+      var formData = new FormData();
+      formData.append('email_address', email);
       fetch('https://app.kit.com/forms/9300960/subscriptions', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email_address: email })
+        body: formData,
+        mode: 'no-cors'
       }).then(function() {
         localStorage.setItem('meta-ads-course-unlocked', 'true');
         syncUnlockState();
