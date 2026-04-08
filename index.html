@@ -864,6 +864,44 @@
   </div>
   <!-- /.module-content -->
 </section>
+
+<!-- ── EMAIL CTA — 模組 1 之後 ─────────────────────────────────── -->
+<div id="post-m1-cta" style="
+  background: var(--color-bg-warm);
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+">
+  <div style="max-width: var(--content-width); margin: 0 auto;" class="animate-in">
+    <p style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-3);">
+      覺得有收穫？後面還有四章
+    </p>
+    <p style="color: var(--color-text-secondary); margin-bottom: var(--space-6); font-size: var(--text-base);">
+      留下 Email 獲得完整課程更新通知
+    </p>
+    <form class="post-m1-cta-form" onsubmit="handleUnlock(event, 'post-m1')" style="max-width: 400px; margin: 0 auto;">
+      <div style="display: flex; gap: var(--space-3);">
+        <input type="email" required placeholder="you@example.com" class="unlock-email-input" style="
+          flex: 1; padding: var(--space-3) var(--space-4);
+          border: 2px solid var(--color-border); border-radius: var(--radius-sm);
+          font-family: var(--font-body); font-size: var(--text-base);
+          background: var(--color-surface); color: var(--color-text); outline: none;
+        ">
+        <button type="submit" style="
+          padding: var(--space-3) var(--space-6); border-radius: var(--radius-sm);
+          border: none; background: var(--color-accent); color: white;
+          font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600;
+          cursor: pointer; white-space: nowrap;
+        ">訂閱</button>
+      </div>
+    </form>
+    <div class="post-m1-cta-success" style="display: none; margin-top: var(--space-4);">
+      <p style="color: var(--color-success); font-weight: 600;">已訂閱，繼續往下學習吧！</p>
+    </div>
+  </div>
+</div>
+
 <!-- ============================================================
      MODULE 2 — 帳戶架構設計
      ============================================================ -->
@@ -2475,8 +2513,8 @@
     function syncUnlockState() {
       var unlocked = localStorage.getItem('meta-ads-course-unlocked') === 'true';
       if (!unlocked) return;
-      document.querySelectorAll('.mid-cta-form, .bottom-cta-form').forEach(function(f) { f.style.display = 'none'; });
-      document.querySelectorAll('.mid-cta-success, .bottom-cta-success').forEach(function(s) { s.style.display = 'block'; });
+      document.querySelectorAll('.post-m1-cta-form, .mid-cta-form, .bottom-cta-form').forEach(function(f) { f.style.display = 'none'; });
+      document.querySelectorAll('.post-m1-cta-success, .mid-cta-success, .bottom-cta-success').forEach(function(s) { s.style.display = 'block'; });
     }
     document.addEventListener('DOMContentLoaded', syncUnlockState);
   </script>
