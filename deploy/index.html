@@ -2486,29 +2486,33 @@
     </p>
   </footer>
 
+  <!-- 隱藏 iframe 接收 Kit 302 redirect -->
+  <iframe name="kit-frame" style="display:none;"></iframe>
+
   <script>
     function handleUnlock(e, source) {
       e.preventDefault();
       var form = e.target;
       var email = form.querySelector('.unlock-email-input').value.trim();
       if (!email) return;
-      // 送出到 ConvertKit
       var btn = form.querySelector('button');
       if (btn) { btn.disabled = true; btn.textContent = '送出中…'; }
-      var formData = new FormData();
-      formData.append('email_address', email);
-      fetch('https://app.kit.com/forms/9300960/subscriptions', {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
-      }).then(function() {
-        localStorage.setItem('meta-ads-course-unlocked', 'true');
-        syncUnlockState();
-      }).catch(function() {
-        // 即使 API 失敗也解鎖，避免阻擋使用者
-        localStorage.setItem('meta-ads-course-unlocked', 'true');
-        syncUnlockState();
-      });
+      // 建立隱藏 form 直接 POST 到 Kit（透過 iframe 避免頁面跳轉）
+      var kitForm = document.createElement('form');
+      kitForm.method = 'POST';
+      kitForm.action = 'https://app.kit.com/forms/9300960/subscriptions';
+      kitForm.target = 'kit-frame';
+      kitForm.style.display = 'none';
+      var input = document.createElement('input');
+      input.name = 'email_address';
+      input.value = email;
+      kitForm.appendChild(input);
+      document.body.appendChild(kitForm);
+      kitForm.submit();
+      document.body.removeChild(kitForm);
+      // 解鎖 UI
+      localStorage.setItem('meta-ads-course-unlocked', 'true');
+      syncUnlockState();
     }
     function syncUnlockState() {
       var unlocked = localStorage.getItem('meta-ads-course-unlocked') === 'true';
