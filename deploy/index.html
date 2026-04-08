@@ -2374,13 +2374,21 @@
       var form = e.target;
       var email = form.querySelector('.unlock-email-input').value.trim();
       if (!email) return;
-      // 存到 localStorage
-      var emails = JSON.parse(localStorage.getItem('meta-ads-course-emails') || '[]');
-      emails.push({ email: email, ts: new Date().toISOString(), source: source });
-      localStorage.setItem('meta-ads-course-emails', JSON.stringify(emails));
-      localStorage.setItem('meta-ads-course-unlocked', 'true');
-      // 同步所有 CTA 狀態
-      syncUnlockState();
+      // 送出到 ConvertKit
+      var btn = form.querySelector('button');
+      if (btn) { btn.disabled = true; btn.textContent = '送出中…'; }
+      fetch('https://app.kit.com/forms/9300960/subscriptions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email_address: email })
+      }).then(function() {
+        localStorage.setItem('meta-ads-course-unlocked', 'true');
+        syncUnlockState();
+      }).catch(function() {
+        // 即使 API 失敗也解鎖，避免阻擋使用者
+        localStorage.setItem('meta-ads-course-unlocked', 'true');
+        syncUnlockState();
+      });
     }
     function syncUnlockState() {
       var unlocked = localStorage.getItem('meta-ads-course-unlocked') === 'true';
