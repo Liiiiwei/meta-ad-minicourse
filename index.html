@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meta 廣告 2026 完全攻略</title>
+    <title>Meta 廣告 2026 完全攻略 — 基礎篇</title>
 
-    <!-- Google Fonts: Bricolage Grotesque · DM Sans · JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,7 +36,7 @@
         aria-valuemax="100"
       ></div>
       <div class="nav-inner">
-        <span class="nav-title">Meta 廣告 2026 完全攻略</span>
+        <span class="nav-title">Meta 廣告 2026 — 基礎篇</span>
         <div class="nav-dots" id="nav-dots" role="tablist">
           <button
             class="nav-dot"
@@ -60,27 +59,11 @@
             role="tab"
             aria-label="Module 3: 數據追蹤與歸因"
           ></button>
-          <button
-            class="nav-dot"
-            data-target="module-4"
-            data-tooltip="創意即定位"
-            role="tab"
-            aria-label="Module 4: 創意即定位"
-          ></button>
-          <button
-            class="nav-dot"
-            data-target="module-5"
-            data-tooltip="預算與擴量"
-            role="tab"
-            aria-label="Module 5: 預算與擴量"
-          ></button>
         </div>
       </div>
     </nav>
 
-    <main id="main">
-      <!-- modules/*.html content is assembled here by build.sh -->
-    </main>
+    <main id="main"></main>
   </body>
 </html>
 <!-- ============================================================
@@ -1579,6 +1562,48 @@
   </div>
   <!-- /.module-content -->
 </section>
+
+<!-- ── MID-COURSE CTA ─────────────────────────────────────────── -->
+<div id="mid-cta" style="
+  background: var(--color-bg);
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+">
+  <div style="max-width: var(--content-width); margin: 0 auto;" class="animate-in">
+    <p style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-3);">
+      還有兩章實戰內容 — 創意策略與預算擴量
+    </p>
+    <p style="color: var(--color-text-secondary); margin-bottom: var(--space-6); font-size: var(--text-base);">
+      留下 Email 免費解鎖完整實戰篇
+    </p>
+    <form class="mid-cta-form" onsubmit="handleUnlock(event, 'mid')" style="max-width: 400px; margin: 0 auto;">
+      <div style="display: flex; gap: var(--space-3);">
+        <input type="email" required placeholder="you@example.com" class="unlock-email-input" style="
+          flex: 1; padding: var(--space-3) var(--space-4);
+          border: 2px solid var(--color-border); border-radius: var(--radius-sm);
+          font-family: var(--font-body); font-size: var(--text-base);
+          background: var(--color-surface); color: var(--color-text); outline: none;
+        ">
+        <button type="submit" style="
+          padding: var(--space-3) var(--space-6); border-radius: var(--radius-sm);
+          border: none; background: var(--color-accent); color: white;
+          font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600;
+          cursor: pointer; white-space: nowrap;
+        ">免費解鎖</button>
+      </div>
+    </form>
+    <div class="mid-cta-success" style="display: none; margin-top: var(--space-4);">
+      <a href="./advanced" style="
+        display: inline-block; padding: var(--space-3) var(--space-8);
+        background: var(--color-accent); color: white; border-radius: var(--radius-sm);
+        font-weight: 600; text-decoration: none;
+      ">前往實戰篇 →</a>
+    </div>
+  </div>
+</div>
+
 <!-- ============================================================
      MODULE 3 — 數據追蹤與歸因
      ============================================================ -->
@@ -2270,1441 +2295,109 @@
   </div>
   <!-- /.module-content -->
 </section>
-<!-- ============================================================
-     MODULE 4 — 創意即定位
-     ============================================================ -->
-<section class="module" id="module-4" style="background: var(--color-bg-warm)">
-  <div class="module-content">
-    <!-- ── MODULE HEADER ──────────────────────────────────────── -->
-    <div class="module-header animate-in">
-      <span class="module-number">04</span>
-      <h2 class="module-title">創意即定位</h2>
-      <p class="module-subtitle">素材品質決定 70-80% 的廣告成效</p>
-    </div>
-
-    <!-- ── SCREEN 1：約會 App 比喻 ────────────────────────────── -->
-    <div class="screen animate-in">
-      <h3 class="screen-heading">從「找對人」到「給對內容」</h3>
-      <p>
-        以前的廣告投放像你自己設定約會對象條件（25-35 歲、喜歡運動...）。現在
-        <span
-          class="term"
-          data-definition="Meta 的核心 AI 廣告配對引擎，負責即時決定哪個用戶看到哪則廣告"
-          >Andromeda</span
-        >
-        像超級 AI
-        媒人——它不看你設的條件，而是看你準備了什麼「自我介紹」（素材）。
-      </p>
-      <p>
-        你準備越多樣化的自我介紹，它越能幫你配對到對的人。如果你只有一張老照片（素材疲勞），就算
-        AI 媒人再厲害也幫不了你。
-      </p>
-
-      <div class="callout callout-accent">
-        <div class="callout-icon">📊</div>
-        <div class="callout-content">
-          <span class="callout-title">AppsFlyer 研究發現</span>
-          <p>
-            Meta 廣告效益有 70-80% 取決於素材強度。Andromeda
-            下，系統從「找對人」轉向「給對內容」。
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── SCREEN 2：Group Chat Animation ─────────────────────── -->
-    <div class="screen animate-in">
-      <h3 class="screen-heading">Andromeda 如何用素材配對用戶</h3>
-      <p>
-        看看 AI 媒人的配對過程：它會從你的素材庫中挑選最適合當前用戶的那一則。
-      </p>
-
-      <div class="chat-window" id="chat-module4">
-        <div class="chat-messages">
-          <!-- 訊息 1：Andromeda -->
-          <div
-            class="chat-message"
-            data-sender="andromeda"
-            style="display: none"
-          >
-            <div class="chat-avatar" style="background: var(--color-actor-2)">
-              A
-            </div>
-            <div class="chat-bubble">
-              <span class="chat-sender" style="color: var(--color-actor-2)"
-                >Andromeda</span
-              >
-              <p>我收到一個愛跑步的用戶，讓我看看有什麼素材...</p>
-            </div>
-          </div>
-
-          <!-- 訊息 2：素材 A -->
-          <div
-            class="chat-message"
-            data-sender="creative-a"
-            style="display: none"
-          >
-            <div class="chat-avatar" style="background: var(--color-actor-1)">
-              A
-            </div>
-            <div class="chat-bubble">
-              <span class="chat-sender" style="color: var(--color-actor-1)"
-                >素材 A - UGC 跑鞋開箱</span
-              >
-              <p>選我！我是跑步相關的開箱影片，真實用戶拍攝，超有說服力！</p>
-            </div>
-          </div>
-
-          <!-- 訊息 3：素材 B -->
-          <div
-            class="chat-message"
-            data-sender="creative-b"
-            style="display: none"
-          >
-            <div class="chat-avatar" style="background: var(--color-actor-3)">
-              B
-            </div>
-            <div class="chat-bubble">
-              <span class="chat-sender" style="color: var(--color-actor-3)"
-                >素材 B - 品牌形象廣告</span
-              >
-              <p>我是品牌故事影片，適合建立品牌認知。</p>
-            </div>
-          </div>
-
-          <!-- 訊息 4：素材 C -->
-          <div
-            class="chat-message"
-            data-sender="creative-c"
-            style="display: none"
-          >
-            <div class="chat-avatar" style="background: var(--color-actor-4)">
-              C
-            </div>
-            <div class="chat-bubble">
-              <span class="chat-sender" style="color: var(--color-actor-4)"
-                >素材 C - 限時折扣圖</span
-              >
-              <p>我是促銷靜態圖，適合衝轉換！</p>
-            </div>
-          </div>
-
-          <!-- 訊息 5：Andromeda 做出選擇 -->
-          <div
-            class="chat-message"
-            data-sender="andromeda"
-            style="display: none"
-          >
-            <div class="chat-avatar" style="background: var(--color-actor-2)">
-              A
-            </div>
-            <div class="chat-bubble">
-              <span class="chat-sender" style="color: var(--color-actor-2)"
-                >Andromeda</span
-              >
-              <p>
-                分析完畢！這位用戶最近大量瀏覽跑步內容，素材 A 的
-                <span
-                  class="term"
-                  data-definition="User-Generated Content，用戶生成內容，看起來像真實用戶拍的而非品牌製作的廣告"
-                  >UGC</span
-                >
-                跑鞋開箱最匹配他的興趣。配對成功！
-              </p>
-            </div>
-          </div>
-
-          <!-- 訊息 6：Andromeda 總結 -->
-          <div
-            class="chat-message"
-            data-sender="andromeda"
-            style="display: none"
-          >
-            <div class="chat-avatar" style="background: var(--color-actor-2)">
-              A
-            </div>
-            <div class="chat-bubble">
-              <span class="chat-sender" style="color: var(--color-actor-2)"
-                >Andromeda</span
-              >
-              <p>
-                這就是為什麼你需要多樣化素材——我有越多選擇，配對精準度就越高。只給我一種素材，我的配對能力就大打折扣。
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 打字動畫 -->
-        <div class="chat-typing" style="display: none">
-          <div
-            class="chat-avatar"
-            id="chat-module3-typing-avatar"
-            style="background: var(--color-actor-2)"
-          >
-            A
-          </div>
-          <div class="chat-typing-dots">
-            <div class="typing-dot"></div>
-            <div class="typing-dot"></div>
-            <div class="typing-dot"></div>
-          </div>
-        </div>
-
-        <!-- 控制按鈕 -->
-        <div class="chat-controls">
-          <button class="btn chat-next-btn">下一則</button>
-          <button class="btn chat-all-btn">播放全部</button>
-          <button class="btn chat-reset-btn">重置</button>
-          <span class="chat-progress">0 / 6 messages</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── SCREEN 3：Reels Ads 表現數據 ───────────────────────── -->
-    <div class="screen animate-in">
-      <h3 class="screen-heading">
-        <span
-          class="term"
-          data-definition="Meta 的短影片格式（類似 TikTok），目前觸及最高的廣告版位"
-          >Reels</span
-        >
-        Ads 為什麼是 2026 的王者
-      </h3>
-      <p>
-        有聲 9:16 直式影片在各項指標上全面領先。前 3
-        秒決定用戶去留，最佳長度落在 26-30 秒。
-      </p>
-
-      <div class="badge-list">
-        <div class="badge-item">
-          <span class="badge-code">觸及 2.25x</span>
-          <span class="badge-desc">比單圖高 2.25 倍</span>
-        </div>
-        <div class="badge-item">
-          <span class="badge-code">觸及 1.36x</span>
-          <span class="badge-desc"
-            >比<span
-              class="term"
-              data-definition="Carousel，一則廣告中可以放多張可滑動的圖片或影片"
-              >輪播</span
-            >高 1.36 倍</span
-          >
-        </div>
-        <div class="badge-item">
-          <span class="badge-code">CPA -34.5%</span>
-          <span class="badge-desc">有聲 9:16 影片 CPA 比圖像廣告低 34.5%</span>
-        </div>
-        <div class="badge-item">
-          <span class="badge-code">26-30 秒</span>
-          <span class="badge-desc">最佳影片長度</span>
-        </div>
-        <div class="badge-item">
-          <span class="badge-code">前 3 秒</span>
-          <span class="badge-desc"
-            >決定用戶是滑走還是停留（<span
-              class="term"
-              data-definition="Thumbstop Rate，拇指停滯率，用戶滑動時被你的廣告吸引而停下來的比率"
-              >Thumbstop Rate</span
-            >）</span
-          >
-        </div>
-      </div>
-    </div>
-
-    <!-- ── SCREEN 4：Pattern Cards — 格式效能比較 ─────────────── -->
-    <div class="screen animate-in">
-      <h3 class="screen-heading">三大廣告格式效能比較</h3>
-      <p>每種格式各有優勢，關鍵是依據行銷目標選擇正確組合。</p>
-
-      <div class="pattern-cards stagger-children">
-        <div class="pattern-card animate-in">
-          <div
-            class="pattern-icon"
-            style="
-              background: var(--color-accent-light);
-              color: var(--color-accent);
-            "
-          >
-            🎬
-          </div>
-          <div class="pattern-title">Reels / 影片</div>
-          <p class="pattern-desc">
-            觸及最高，適合產品展示、教學示範、品牌故事。有聲 9:16 格式 CPA 低
-            34.5%。
-          </p>
-        </div>
-        <div class="pattern-card animate-in">
-          <div
-            class="pattern-icon"
-            style="
-              background: var(--color-info-light);
-              color: var(--color-info);
-            "
-          >
-            🎠
-          </div>
-          <div class="pattern-title">輪播</div>
-          <p class="pattern-desc">
-            中等觸及，適合多產品展示、步驟教學。可滑動的互動感有效提升停留時間。
-          </p>
-        </div>
-        <div class="pattern-card animate-in">
-          <div
-            class="pattern-icon"
-            style="
-              background: var(--color-success-light);
-              color: var(--color-success);
-            "
-          >
-            🖼️
-          </div>
-          <div class="pattern-title">靜態圖</div>
-          <p class="pattern-desc">
-            基準觸及，但仍貢獻 60-70% 轉換。製作快速、測試成本低，不可忽視。
-          </p>
-        </div>
-      </div>
-
-      <div class="callout callout-info">
-        <div class="callout-icon">🤔</div>
-        <div class="callout-content">
-          <span class="callout-title">反直覺：靜態圖仍佔主導</span>
-          <p>
-            在影片當道的 2026 年，靜態圖仍然貢獻 60-70%
-            的轉換。原因：製作門檻低、測試速度快、某些受眾偏好簡潔直接的訊息。別因為追求影片而忽略了真正帶來成效的格式。
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── SCREEN 5：UGC 風格創意數據 ─────────────────────────── -->
-    <div class="screen animate-in">
-      <h3 class="screen-heading">
-        <span
-          class="term"
-          data-definition="User-Generated Content，用戶生成內容，看起來像真實用戶拍的而非品牌製作的廣告"
-          >UGC</span
-        >
-        風格素材的壓倒性優勢
-      </h3>
-      <p>看起來像真實用戶拍攝的素材，在各項指標上全面碾壓傳統品牌廣告。</p>
-
-      <div class="pattern-cards stagger-children">
-        <div class="pattern-card animate-in">
-          <div
-            class="pattern-icon"
-            style="
-              background: var(--color-accent-light);
-              color: var(--color-accent);
-            "
-          >
-            💬
-          </div>
-          <div class="pattern-title">互動率 +28%</div>
-          <p class="pattern-desc">
-            用戶更願意按讚、留言、分享看起來「真實」的內容。
-          </p>
-        </div>
-        <div class="pattern-card animate-in">
-          <div
-            class="pattern-icon"
-            style="
-              background: var(--color-info-light);
-              color: var(--color-info);
-            "
-          >
-            👆
-          </div>
-          <div class="pattern-title">
-            <span
-              class="term"
-              data-definition="Click-Through Rate，點擊率，看到廣告後點擊的人數比例"
-              >CTR</span
-            >
-            高 4 倍
-          </div>
-          <p class="pattern-desc">真實感降低廣告抗性，點擊意願大幅提升。</p>
-        </div>
-        <div class="pattern-card animate-in">
-          <div
-            class="pattern-icon"
-            style="
-              background: var(--color-success-light);
-              color: var(--color-success);
-            "
-          >
-            💰
-          </div>
-          <div class="pattern-title">
-            <span class="term" data-definition="Cost Per Click，每次點擊成本"
-              >CPC</span
-            >
-            低 50%
-          </div>
-          <p class="pattern-desc">高互動率讓演算法給予更低的競價成本。</p>
-        </div>
-        <div class="pattern-card animate-in">
-          <div
-            class="pattern-icon"
-            style="
-              background: var(--color-error-light);
-              color: var(--color-error);
-            "
-          >
-            🎯
-          </div>
-          <div class="pattern-title">轉換率 3-6%</div>
-          <p class="pattern-desc">
-            對比傳統廣告 1-3%，UGC 風格的轉換率高出一倍以上。
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── SCREEN 6：Translation Block — 三切角策略 ───────────── -->
-    <div class="screen animate-in">
-      <h3 class="screen-heading">創意多樣性：三切角策略</h3>
-      <p>
-        每廣告組建議 8-12 個活躍創意變體，每月更新 25-30%
-        素材庫。用以下配方確保素材多元。
-      </p>
-
-      <div class="translation-block">
-        <div class="translation-code">
-          <span class="translation-label">配方</span>
-          <span class="code-keyword">素材配方</span>
-          <span class="code-operator">=</span>
-          <span class="code-operator">{</span>
-          <span class="code-property">理性切角</span
-          ><span class="code-operator">:</span>
-          <span class="code-number">30%</span>,
-          <span class="code-comment">// 數據、功能、比較</span>
-          <span class="code-property">情感切角</span
-          ><span class="code-operator">:</span>
-          <span class="code-number">40%</span>,
-          <span class="code-comment">// 故事、痛點、夢想</span>
-          <span class="code-property">社會認同</span
-          ><span class="code-operator">:</span>
-          <span class="code-number">30%</span>
-          <span class="code-comment">// UGC、評價、見證</span>
-          <span class="code-operator">}</span>
-
-          <span class="code-comment">// 測試架構</span>
-          <span class="code-keyword">測試矩陣</span>
-          <span class="code-operator">=</span>
-          <span class="code-number">3</span> 概念
-          <span class="code-operator">×</span>
-          <span class="code-number">2</span> 版本
-          <span class="code-operator">×</span>
-          <span class="code-number">2</span> 受眾
-          <span class="code-operator">=</span>
-          <span class="code-number">12</span> 組合
-        </div>
-        <div class="translation-english">
-          <span class="translation-label">白話翻譯</span>
-          <div class="translation-lines">
-            <div class="tl">
-              <strong>理性切角 30%</strong
-              >：用數字說服。規格比較、成分分析、省多少錢。
-            </div>
-            <div class="tl">
-              <strong>情感切角 40%</strong
-              >：用故事打動。痛點共鳴、使用情境、理想生活。佔比最高因為人是情感動物。
-            </div>
-            <div class="tl">
-              <strong>社會認同 30%</strong
-              >：用他人背書。真實評價、開箱見證、「已有 10,000 人購買」。
-            </div>
-            <div class="tl">
-              <strong>測試矩陣</strong>：3 個創意概念各做 2 個版本，投放給 2
-              種受眾，得到 12 種組合來快速找出贏家。
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── SCREEN 7：Step Cards — 創意疲勞警示信號 ────────────── -->
-    <div class="screen animate-in">
-      <h3 class="screen-heading">
-        <span
-          class="term"
-          data-definition="Creative Fatigue，同一素材反覆出現導致用戶不再注意，CTR 和轉換率下降"
-          >創意疲勞</span
-        >：4 個警示信號與應對
-      </h3>
-      <p>
-        Andromeda 下，素材疲勞從過去的 4+ 週縮短至 2-3
-        週。你的素材比你想的更快過期。
-      </p>
-
-      <div class="step-cards stagger-children">
-        <div class="step-card animate-in">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <strong>CTR 從 7 天高點下跌 20%+</strong>
-            <p>
-              監控每則素材的 7 日
-              <span
-                class="term"
-                data-definition="Click-Through Rate，點擊率，看到廣告後點擊的人數比例"
-                >CTR</span
-              >
-              趨勢。一旦從峰值下降超過 20%，準備替換。
-            </p>
-          </div>
-        </div>
-        <div class="step-card animate-in">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <strong>CPA 從基準上升 15%+</strong>
-            <p>
-              轉換成本持續上升是疲勞的直接財務信號。設定自動化規則在 CPA
-              超標時暫停素材。
-            </p>
-          </div>
-        </div>
-        <div class="step-card animate-in">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <strong
-              ><span
-                class="term"
-                data-definition="Frequency，頻次，平均每個人看到你的廣告幾次"
-                >Frequency</span
-              >
-              超過 3 次</strong
-            >
-            <p>
-              同一用戶看到廣告超過 3 次，邊際效益急速遞減。是時候輪換新素材了。
-            </p>
-          </div>
-        </div>
-        <div class="step-card animate-in">
-          <div class="step-num">4</div>
-          <div class="step-body">
-            <strong>互動率（留言、分享）持續走低</strong>
-            <p>
-              用戶不再有反應代表素材已失去新鮮感。每 2 週輪換、每週新增 3-5
-              個變體保持活力。
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── SCREEN 8：素材分層策略 ─────────────────────────────── -->
-    <div class="screen animate-in">
-      <h3 class="screen-heading">素材分層策略：用素材做漏斗</h3>
-      <p>不同溫度的受眾需要不同的素材策略。把素材當作漏斗的每一層。</p>
-
-      <div class="step-cards stagger-children">
-        <div class="step-card animate-in">
-          <div class="step-num" style="background: var(--color-info)">❄️</div>
-          <div class="step-body">
-            <strong>冷受眾 — 問題意識喚起</strong>
-            <p>
-              品牌故事、教學內容、問題意識喚起。目標是讓他們認識你，而不是馬上購買。
-            </p>
-          </div>
-        </div>
-        <div class="step-card animate-in">
-          <div class="step-num" style="background: var(--color-actor-4)">
-            🌤️
-          </div>
-          <div class="step-body">
-            <strong>暖受眾 — 信任建立</strong>
-            <p>UGC / 顧客見證、開箱影片、前後對比。用社會認同消除疑慮。</p>
-          </div>
-        </div>
-        <div class="step-card animate-in">
-          <div class="step-num" style="background: var(--color-error)">🔥</div>
-          <div class="step-body">
-            <strong>熱受眾 — 臨門一腳</strong>
-            <p>
-              限時優惠、購物車提醒、最後機會。他們已經想買，只需要一個理由現在行動。
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── SCREEN 9：Quiz ─────────────────────────────────────── -->
-    <div class="screen animate-in">
-      <h3 class="screen-heading">隨堂測驗</h3>
-
-      <div class="quiz-container" id="quiz-module4">
-        <!-- 問題 1 -->
-        <div
-          class="quiz-question-block scenario-block"
-          data-correct="b"
-          data-explanation-right="AppsFlyer 研究指出，Andromeda 時代的 Meta 廣告效益有 70-80% 取決於素材品質，受眾定位的重要性已大幅降低。"
-          data-explanation-wrong="在 Andromeda 時代，系統從「找對人」轉向「給對內容」。素材品質才是最關鍵的變數，佔 70-80% 的成效貢獻。"
-        >
-          <div class="scenario-context">
-            <span class="scenario-label">情境</span>
-            <p>
-              你的老闆說：「廣告效果不好，一定是受眾設定有問題，花更多時間研究受眾定位吧。」你會怎麼回應？
-            </p>
-          </div>
-          <div class="quiz-question">
-            在 2026 年的 Meta 廣告中，最應該優先投入資源的是什麼？
-          </div>
-          <div class="quiz-options">
-            <button
-              class="quiz-option"
-              data-value="a"
-              onclick="selectOption(this)"
-            >
-              <span class="quiz-option-radio"></span>
-              更精細的受眾定位設定
-            </button>
-            <button
-              class="quiz-option"
-              data-value="b"
-              onclick="selectOption(this)"
-            >
-              <span class="quiz-option-radio"></span>
-              多樣化的高品質素材
-            </button>
-            <button
-              class="quiz-option"
-              data-value="c"
-              onclick="selectOption(this)"
-            >
-              <span class="quiz-option-radio"></span>
-              增加廣告預算
-            </button>
-          </div>
-          <div class="quiz-feedback"></div>
-        </div>
-
-        <!-- 問題 2 -->
-        <div
-          class="quiz-question-block scenario-block"
-          data-correct="c"
-          data-explanation-right="CTR 從 7 天高點下跌超過 20% 是創意疲勞的早期警示。在 Andromeda 下，疲勞週期已從 4+ 週縮短至 2-3 週，需要更頻繁地更新素材。"
-          data-explanation-wrong="CTR 下跌 20% 是明確的創意疲勞信號。正確做法是準備新素材替換，而非加預算或縮小受眾。"
-        >
-          <div class="scenario-context">
-            <span class="scenario-label">情境</span>
-            <p>
-              你的一則廣告素材上線 2 週後，CTR 從高點下降了 25%，但 CPA
-              只微幅上升。你下一步應該怎麼做？
-            </p>
-          </div>
-          <div class="quiz-question">
-            面對這個早期疲勞信號，最佳的應對策略是？
-          </div>
-          <div class="quiz-options">
-            <button
-              class="quiz-option"
-              data-value="a"
-              onclick="selectOption(this)"
-            >
-              <span class="quiz-option-radio"></span>
-              加大預算讓更多人看到這則廣告
-            </button>
-            <button
-              class="quiz-option"
-              data-value="b"
-              onclick="selectOption(this)"
-            >
-              <span class="quiz-option-radio"></span>
-              縮小受眾範圍提高精準度
-            </button>
-            <button
-              class="quiz-option"
-              data-value="c"
-              onclick="selectOption(this)"
-            >
-              <span class="quiz-option-radio"></span>
-              開始準備新的創意變體，逐步替換疲勞素材
-            </button>
-          </div>
-          <div class="quiz-feedback"></div>
-        </div>
-
-        <!-- 問題 3 -->
-        <div
-          class="quiz-question-block scenario-block"
-          data-correct="b"
-          data-explanation-right="暖受眾已經認識品牌但還在猶豫，UGC 顧客見證和前後對比最能建立信任、消除疑慮。冷受眾用教學內容，熱受眾用限時優惠。"
-          data-explanation-wrong="素材分層策略的關鍵是依照受眾溫度匹配內容。暖受眾需要的是社會認同（UGC、見證），不是教學內容（給冷受眾的）或限時促銷（給熱受眾的）。"
-        >
-          <div class="scenario-context">
-            <span class="scenario-label">情境</span>
-            <p>
-              你正在為一個護膚品牌設計素材分層策略。針對「曾造訪官網但未購買」的暖受眾，你應該優先使用什麼類型的素材？
-            </p>
-          </div>
-          <div class="quiz-question">哪種素材最適合暖受眾？</div>
-          <div class="quiz-options">
-            <button
-              class="quiz-option"
-              data-value="a"
-              onclick="selectOption(this)"
-            >
-              <span class="quiz-option-radio"></span>
-              品牌創辦人的理念故事影片
-            </button>
-            <button
-              class="quiz-option"
-              data-value="b"
-              onclick="selectOption(this)"
-            >
-              <span class="quiz-option-radio"></span>
-              真實顧客的使用前後對比與 UGC 見證
-            </button>
-            <button
-              class="quiz-option"
-              data-value="c"
-              onclick="selectOption(this)"
-            >
-              <span class="quiz-option-radio"></span>
-              限時 72 小時 30% 折扣靜態圖
-            </button>
-          </div>
-          <div class="quiz-feedback"></div>
-        </div>
-
-        <!-- 按鈕 -->
-        <button class="quiz-check-btn" onclick="checkQuiz('quiz-module4')">
-          送出答案
-        </button>
-        <button class="quiz-reset-btn" onclick="resetQuiz('quiz-module4')">
-          重新作答
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ============================================================
-     MODULE 5 — 預算與擴量
-     ============================================================ -->
-<section class="module" id="module-5" style="background: var(--color-bg)">
-  <div class="module-content">
-    <!-- ── MODULE HEADER ──────────────────────────────────────── -->
-    <header class="module-header animate-in">
-      <span class="module-number">05</span>
-      <h2 class="module-title">預算與擴量</h2>
-      <p class="module-subtitle">從小預算測試到大規模擴張的完整路徑</p>
-    </header>
-
-    <div class="module-body">
-      <!-- ── SCREEN 1：投資理財比喻導入 ──────────────────────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">廣告預算 = 投資理財</h3>
-        <p>
-          預算分配就像理財配置——70% 放穩定收益的定存（已驗證廣告），20%
-          放成長型基金（擴展表現好的），10% 風險投資（測試新素材）。
-        </p>
-        <p>
-          而<span
-            class="term"
-            data-definition="Learning Phase，Meta AI 需要累積約 50 次轉換來理解你的廣告最適合投給誰的期間"
-            >學習階段</span
-          >就像新開的基金需要「建倉期」——這段時間不要頻繁進出（調整預算），否則永遠建不好倉位。
-        </p>
-
-        <div class="icon-rows">
-          <div class="icon-row">
-            <div
-              class="icon-circle"
-              style="background: var(--color-success-light)"
-            >
-              🏦
-            </div>
-            <div>
-              <strong>70% 定存 = 已驗證的 Winning Ads</strong>
-              <p>穩定產出、可預期回報，是帳戶的基石。</p>
-            </div>
-          </div>
-          <div class="icon-row">
-            <div
-              class="icon-circle"
-              style="background: var(--color-info-light)"
-            >
-              📈
-            </div>
-            <div>
-              <strong>20% 成長基金 = 擴展表現好的廣告組</strong>
-              <p>逐步加碼、放大回報，是帳戶的成長引擎。</p>
-            </div>
-          </div>
-          <div class="icon-row">
-            <div
-              class="icon-circle"
-              style="background: var(--color-error-light)"
-            >
-              🎰
-            </div>
-            <div>
-              <strong>10% 風險投資 = 測試新素材與受眾</strong>
-              <p>高風險高報酬，找到下一個贏家的唯一方式。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── SCREEN 2：Pattern Cards — 出價策略 ─────────────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">三大出價策略選擇</h3>
-        <p>
-          不同階段、不同產品適合不同的出價策略。選錯策略，再多預算也是浪費。
-        </p>
-
-        <div class="pattern-cards stagger-children">
-          <div
-            class="pattern-card animate-in"
-
-          >
-            <div
-              class="pattern-icon"
-              style="
-                background: var(--color-accent-light);
-                color: var(--color-accent);
-              "
-            >
-              🚀
-            </div>
-            <div class="pattern-title">
-              <span
-                class="term"
-                data-definition="最低成本出價，Meta 自動以最低可能成本獲取轉換，適合不設 CPA 上限時使用"
-                >Lowest Cost</span
-              >
-            </div>
-            <p class="pattern-desc">
-              最多轉換，花完預算。適合<strong>測試期、新帳戶</strong>——讓 AI
-              自由探索，快速累積數據退出學習階段。
-            </p>
-          </div>
-          <div
-            class="pattern-card animate-in"
-
-          >
-            <div
-              class="pattern-icon"
-              style="
-                background: var(--color-info-light);
-                color: var(--color-info);
-              "
-            >
-              🎯
-            </div>
-            <div class="pattern-title">
-              <span
-                class="term"
-                data-definition="成本上限，告訴 Meta 你能接受的最高 CPA，系統會盡量控制在這個價格以下"
-                >Cost Cap</span
-              >
-            </div>
-            <p class="pattern-desc">
-              最多轉換，CPA 不超過 X。適合<strong>擴展期</strong>——已知道合理
-              CPA 範圍，想要控制成本同時放量。
-            </p>
-          </div>
-          <div
-            class="pattern-card animate-in"
-
-          >
-            <div
-              class="pattern-icon"
-              style="
-                background: rgba(123, 109, 170, 0.12);
-                color: var(--color-actor-3);
-              "
-            >
-              🔒
-            </div>
-            <div class="pattern-title">
-              <span
-                class="term"
-                data-definition="出價上限，在每次競標時設定最高出價金額，最嚴格的成本控制方式"
-                >Bid Cap</span
-              >
-            </div>
-            <p class="pattern-desc">
-              每次競標最多出 X 元。適合<strong>嚴格 ROI、高單價產品</strong
-              >——一件利潤 5,000 元以上，不容許超標。
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── SCREEN 3：ACB 說明 ──────────────────────────────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">
-          <span
-            class="term"
-            data-definition="Advantage Campaign Budget，原 CBO（Campaign Budget Optimization），Meta 自動在廣告組間分配預算"
-            >ACB</span
-          >（Advantage Campaign Budget）
-        </h3>
-        <p>
-          CBO 已更名為 ACB，讓 Meta AI
-          自動在廣告組之間分配預算。但它不是萬能的。
-        </p>
-
-        <div class="callout callout-warning">
-          <div class="callout-icon">⚠️</div>
-          <div class="callout-content">
-            <span class="callout-title">廣告組 > 5 時的陷阱</span>
-            <p>
-              ACB 在廣告組超過 5 個時可能過度集中預算在少數幾組。建議搭配
-              <span
-                class="term"
-                data-definition="最低花費限制，確保某個廣告組至少能分配到一定預算，避免被 AI 完全忽略"
-                >Minimum Spend Limit</span
-              >
-              確保每組至少分配到基本預算。
-            </p>
-          </div>
-        </div>
-
-        <div class="callout callout-info">
-          <div class="callout-icon">🧪</div>
-          <div class="callout-content">
-            <span class="callout-title">A/B 測試期間用 Ad Set Budget</span>
-            <p>
-              需要公平比較不同廣告組時，改用 Ad Set Budget（手動分配），避免 ACB
-              把預算全導向其中一組，導致測試失真。
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── SCREEN 4：Step Cards — 學習階段加速退出 ─────────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">學習階段加速退出：5 個關鍵步驟</h3>
-        <p>目標是在 7 天內累積 50 次轉換。以下是加速退出的具體做法。</p>
-
-        <div class="step-cards stagger-children">
-          <div class="step-card animate-in">
-            <div class="step-num">1</div>
-            <div class="step-body">
-              <strong>設定足夠的日預算</strong>
-              <p>
-                日預算為目標 CPA 的 5-10 倍。例如目標 CPA 為 500
-                元，日預算至少設 2,500-5,000 元。
-              </p>
-            </div>
-          </div>
-          <div class="step-card animate-in">
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <strong>合併廣告組、擴大受眾</strong>
-              <p>
-                把相似的廣告組合併，受眾範圍拉大。分散的小組永遠湊不到 50
-                次轉換。
-              </p>
-            </div>
-          </div>
-          <div class="step-card animate-in">
-            <div class="step-num">3</div>
-            <div class="step-body">
-              <strong>精簡素材數量</strong>
-              <p>
-                每組控制在 3-6 則素材。太多素材會分散學習數據，讓 AI
-                每則都學不透。
-              </p>
-            </div>
-          </div>
-          <div class="step-card animate-in">
-            <div class="step-num">4</div>
-            <div class="step-body">
-              <strong>預算調整克制</strong>
-              <p>
-                每次調整不超過 20%，間隔至少 2-3
-                天。大幅調整會讓學習階段重置，前功盡棄。
-              </p>
-            </div>
-          </div>
-          <div class="step-card animate-in">
-            <div class="step-num">5</div>
-            <div class="step-body">
-              <strong>轉換事件降級</strong>
-              <p>
-                若 Purchase 量不夠，改用
-                <span
-                  class="term"
-                  data-definition="加入購物車事件，當 Purchase 數據量不夠訓練 AI 時，可以改用這個較上層的轉換事件"
-                  >Add to Cart</span
-                >
-                作為轉換目標，讓 AI 有足夠數據學習。
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="callout callout-accent">
-          <div class="callout-icon">🇹🇼</div>
-          <div class="callout-content">
-            <span class="callout-title">台灣市場特殊考量</span>
-            <p>
-              50
-              次轉換/週在台灣市場相對難達成（市場規模小、單價高）。如果你的產品
-              Purchase 週轉換量長期低於 50，強烈建議改用 Add to Cart
-              作為最佳化事件，讓 AI 有足夠訊號學習。
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── SCREEN 5：Translation Block — 70-20-10 框架 ────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">70-20-10 預算分配框架</h3>
-        <p>把廣告預算當投資組合管理。穩定為主、成長為輔、探索不停。</p>
-
-        <div class="translation-block">
-          <div class="translation-code">
-            <span class="translation-label">配方</span>
-            <span class="code-keyword">月預算</span>
-            <span class="code-operator">=</span>
-            <span class="code-number">NT$100,000</span>
-
-            <span class="code-property">maintain</span
-            ><span class="code-operator"> =</span>
-            <span class="code-number">70,000</span>
-            <span class="code-comment">// 已驗證的贏家廣告，穩定產出</span>
-            <span class="code-property">scale</span
-            ><span class="code-operator"> =</span>
-            <span class="code-number">20,000</span>
-            <span class="code-comment">// 表現好的放大，逐步增加預算</span>
-            <span class="code-property">test</span
-            ><span class="code-operator"> =</span>
-            <span class="code-number">10,000</span>
-            <span class="code-comment">// 新素材、新受眾、找下一個贏家</span>
-          </div>
-          <div class="translation-english">
-            <span class="translation-label">白話翻譯</span>
-            <div class="translation-lines">
-              <div class="tl">
-                <strong>Maintain 70%（NT$70,000）</strong
-                >：放你最穩定的贏家廣告，它們是帳戶的「定存」，持續產出可預期的回報。
-              </div>
-              <div class="tl">
-                <strong>Scale 20%（NT$20,000）</strong
-                >：把表現好的廣告逐步放大預算，像「成長型基金」慢慢加碼。
-              </div>
-              <div class="tl">
-                <strong>Test 10%（NT$10,000）</strong
-                >：投入新素材、新受眾、新格式的測試，像「風險投資」尋找下一個爆款。
-              </div>
-              <div class="tl">
-                <strong>關鍵原則</strong>：即使帳戶表現再好，也要維持 10%
-                的測試預算，否則一旦贏家疲勞就沒有備案。
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── SCREEN 6：台灣市場參考值 ────────────────────────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">台灣市場參考值（2026 推估）</h3>
-        <p>
-          以下是台灣 Meta 廣告的基準數據，用來評估你的帳戶表現是否在合理範圍。
-        </p>
-
-        <div class="badge-list">
-          <div class="badge-item">
-            <span class="badge-code"
-              ><span
-                class="term"
-                data-definition="Cost Per Mille，每千次曝光成本"
-                >CPM</span
-              ></span
-            >
-            <span class="badge-desc">180-450 TWD</span>
-          </div>
-          <div class="badge-item">
-            <span class="badge-code">CPC</span>
-            <span class="badge-desc">6-25 TWD</span>
-          </div>
-          <div class="badge-item">
-            <span class="badge-code">CPA</span>
-            <span class="badge-desc">350-1,600 TWD</span>
-          </div>
-          <div class="badge-item">
-            <span class="badge-code">CTR</span>
-            <span class="badge-desc">0.8%-2.5%</span>
-          </div>
-          <div class="badge-item">
-            <span class="badge-code">旺季溢價</span>
-            <span class="badge-desc">CPM 上漲 30-50%</span>
-          </div>
-        </div>
-
-        <div class="callout callout-warning">
-          <div class="callout-icon">📅</div>
-          <div class="callout-content">
-            <span class="callout-title">旺季預算規劃</span>
-            <p>
-              雙 11、聖誕節、農曆年前 CPM 會上漲 30-50%。建議旺季前 2
-              週開始暖機，並預留額外預算應對競價上升。
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── SCREEN 7：ASC 現有客戶預算上限 ──────────────────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">ASC 進階設定 — 現有客戶預算上限</h3>
-        <p>
-          這個設定決定 ASC 花多少預算在舊客上。注意：是「上限」不是「分配」。
-        </p>
-
-        <div class="step-cards stagger-children">
-          <div class="step-card animate-in">
-            <div class="step-num" style="background: var(--color-info)">🆕</div>
-            <div class="step-body">
-              <strong>新客獲取導向：10-20%</strong>
-              <p>大部分預算投向新客，適合品牌拓展期或新進市場。</p>
-            </div>
-          </div>
-          <div class="step-card animate-in">
-            <div class="step-num" style="background: var(--color-success)">
-              ⚖️
-            </div>
-            <div class="step-body">
-              <strong>均衡成長：25-30%（起始建議）</strong>
-              <p>新舊客兼顧，適合多數台灣中小品牌的起步設定。</p>
-            </div>
-          </div>
-          <div class="step-card animate-in">
-            <div class="step-num" style="background: var(--color-actor-4)">
-              🎉
-            </div>
-            <div class="step-body">
-              <strong>節慶促銷期：40-50%</strong>
-              <p>舊客回購意願高的促銷時段，適當提高舊客上限抓住轉換機會。</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="callout callout-info">
-          <div class="callout-icon">💡</div>
-          <div class="callout-content">
-            <span class="callout-title">「上限」vs「分配」的區別</span>
-            <p>
-              設定 30% 不代表一定花 30% 在舊客上。它只是告訴 Meta「最多」花到
-              30%。實際花費取決於 AI 判斷，可能遠低於上限。
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── SCREEN 8：Flow Animation — 帳戶遷移策略 ─────────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">帳戶遷移策略（四階段）</h3>
-        <p>從舊架構遷移到新架構，不能一刀切。點擊「下一步」看完整遷移時程。</p>
-
-        <div
-          class="flow-animation"
-          id="flow-module5"
-          data-steps='[
-          {"highlight":"flow-m5-phase1","label":"Phase 1（1-2 週）：舊架構 70% / 新架構 30%。先讓新架構開始學習，累積初始數據。","packet":false},
-          {"highlight":"flow-m5-phase2","label":"Phase 2（3-4 週）：舊架構 50% / 新架構 50%。新架構退出學習階段後，逐步平衡預算分配。","packet":true,"from":"m5-phase1","to":"m5-phase2"},
-          {"highlight":"flow-m5-phase3","label":"Phase 3（5-6 週）：舊架構 20-30% / 新架構 70-80%。新架構表現穩定後，大幅轉移預算。","packet":true,"from":"m5-phase2","to":"m5-phase3"},
-          {"highlight":"flow-m5-phase4","label":"Phase 4（7-8 週）：舊架構 0-10% / 新架構 90-100%。確認新架構全面優於舊架構後完成遷移。","packet":true,"from":"m5-phase3","to":"m5-phase4"}
-        ]'
-        >
-          <div class="flow-actors">
-            <div class="flow-actor" id="flow-m5-phase1">
-              <div class="flow-actor-icon">🏗️</div>
-              <span>Phase 1<br />70 / 30</span>
-            </div>
-            <div class="flow-actor" id="flow-m5-phase2">
-              <div class="flow-actor-icon">⚖️</div>
-              <span>Phase 2<br />50 / 50</span>
-            </div>
-            <div class="flow-actor" id="flow-m5-phase3">
-              <div class="flow-actor-icon">🚀</div>
-              <span>Phase 3<br />30 / 70</span>
-            </div>
-            <div class="flow-actor" id="flow-m5-phase4">
-              <div class="flow-actor-icon">✅</div>
-              <span>Phase 4<br />0-10 / 90-100</span>
-            </div>
-          </div>
-          <div class="flow-packet"></div>
-          <div class="flow-step-label">
-            點擊「下一步」開始瀏覽四階段遷移計畫
-          </div>
-          <div class="flow-controls">
-            <button class="btn btn-primary flow-next-btn">下一步</button>
-            <button class="btn flow-reset-btn">重置</button>
-            <span class="flow-progress">Step 0 / 4</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── SCREEN 9：何時手動介入 Advantage+ ────────────────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">何時手動介入 Advantage+</h3>
-        <p>AI 不是萬能的。出現以下信號時，你需要立即手動介入。</p>
-
-        <div class="pattern-cards stagger-children">
-          <div class="pattern-card animate-in">
-            <div
-              class="pattern-icon"
-              style="
-                background: var(--color-error-light);
-                color: var(--color-error);
-              "
-            >
-              👥
-            </div>
-            <div class="pattern-title">新客佔比 < 30%</div>
-            <p class="pattern-desc">
-              ASC 過度投遞舊客。立即降低現有客戶預算上限，強制 AI 尋找新客。
-            </p>
-          </div>
-          <div class="pattern-card animate-in">
-            <div
-              class="pattern-icon"
-              style="
-                background: var(--color-accent-light);
-                color: var(--color-accent);
-              "
-            >
-              📊
-            </div>
-            <div class="pattern-title">CPM 週增 > 25%</div>
-            <p class="pattern-desc">
-              素材疲勞或受眾飽和的信號。立即更換素材，為 AI 提供新的「武器」。
-            </p>
-          </div>
-          <div class="pattern-card animate-in">
-            <div
-              class="pattern-icon"
-              style="
-                background: var(--color-info-light);
-                color: var(--color-info);
-              "
-            >
-              ⏰
-            </div>
-            <div class="pattern-title">學習階段卡住 > 14 天</div>
-            <p class="pattern-desc">
-              AI 遲遲無法退出學習。提高預算至 CPA 的 10
-              倍，或合併廣告組集中數據。
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── SCREEN 10：Drag-and-Drop — 出價策略配對 ─────────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">動手練習：出價策略配對</h3>
-        <p>把每個情境拖到對應的最佳出價策略。</p>
-
-        <div class="dnd-container" id="dnd-module5">
-          <div class="dnd-chips">
-            <div
-              class="dnd-chip"
-              draggable="true"
-              data-answer="scenario-lowest"
-            >
-              Lowest Cost
-            </div>
-            <div class="dnd-chip" draggable="true" data-answer="scenario-cost">
-              Cost Cap
-            </div>
-            <div class="dnd-chip" draggable="true" data-answer="scenario-bid">
-              Bid Cap
-            </div>
-          </div>
-
-          <div class="dnd-zones">
-            <div class="dnd-zone" data-correct="scenario-lowest">
-              <div class="dnd-zone-label">新帳戶剛起步測試</div>
-              <div class="dnd-zone-target">Drop here</div>
-            </div>
-            <div class="dnd-zone" data-correct="scenario-cost">
-              <div class="dnd-zone-label">想要控制 CPA 不超過 500 元</div>
-              <div class="dnd-zone-target">Drop here</div>
-            </div>
-            <div class="dnd-zone" data-correct="scenario-bid">
-              <div class="dnd-zone-label">高單價精品一件利潤 5000 元</div>
-              <div class="dnd-zone-target">Drop here</div>
-            </div>
-          </div>
-
-          <div style="margin-top: var(--space-6)">
-            <button class="btn btn-primary" onclick="checkDnD('dnd-module5')">
-              檢查答案
-            </button>
-            <button
-              class="btn"
-              onclick="resetDnD('dnd-module5')"
-              style="margin-left: var(--space-3)"
-            >
-              重置
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── SCREEN 11：Quiz ─────────────────────────────────── -->
-      <div class="screen animate-in">
-        <h3 class="screen-heading">情境測驗</h3>
-
-        <div class="quiz-container" id="quiz-module5">
-          <!-- Q1 -->
-          <div
-            class="quiz-question-block scenario-block"
-            data-correct="b"
-            data-explanation-right="70-20-10 框架建議 70% 給已驗證的贏家廣告、20% 擴展表現好的、10% 測試新的。月預算 60K 中，Testing 應佔 6,000 元。"
-            data-explanation-wrong="70-20-10 的核心邏輯是穩定為主、測試不停。把太多預算放在測試上風險過高，但完全不測試則會在贏家疲勞時沒有備案。"
-          >
-            <div class="scenario-context">
-              <span class="scenario-label">情境</span>
-              <p>
-                你的月廣告預算為 NT$60,000，帳戶已有幾組表現穩定的贏家素材。
-                你想開始測試新素材，但不確定該分配多少預算。
-              </p>
-            </div>
-            <div class="quiz-question">
-              Q1：依據 70-20-10 框架，你的測試預算應該設為多少？
-            </div>
-            <div class="quiz-options">
-              <button
-                class="quiz-option"
-                data-value="a"
-                onclick="selectOption(this)"
-              >
-                <span class="quiz-option-radio"></span>
-                NT$18,000（30%），越多測試越快找到贏家
-              </button>
-              <button
-                class="quiz-option"
-                data-value="b"
-                onclick="selectOption(this)"
-              >
-                <span class="quiz-option-radio"></span>
-                NT$6,000（10%），維持穩定產出同時持續探索
-              </button>
-              <button
-                class="quiz-option"
-                data-value="c"
-                onclick="selectOption(this)"
-              >
-                <span class="quiz-option-radio"></span>
-                NT$0，等現有素材疲勞了再測試
-              </button>
-            </div>
-            <div class="quiz-feedback"></div>
-          </div>
-
-          <!-- Q2 -->
-          <div
-            class="quiz-question-block scenario-block"
-            data-correct="a"
-            data-explanation-right="學習階段卡住超過 14 天，代表當前設定無法累積足夠轉換。正確做法是提高預算或合併廣告組，讓 AI 有更多數據學習。"
-            data-explanation-wrong="學習階段卡住時，降低預算或拆分更多組只會讓數據更分散。正確方向是集中資源——提高預算至 CPA 的 10 倍，或合併相似廣告組。"
-          >
-            <div class="scenario-context">
-              <span class="scenario-label">情境</span>
-              <p>
-                你的廣告組已在學習階段停留 16 天，只累積了 23 次轉換。 目標 CPA
-                為 NT$400，目前日預算設在 NT$1,500。
-              </p>
-            </div>
-            <div class="quiz-question">
-              Q2：你應該怎麼做才能加速退出學習階段？
-            </div>
-            <div class="quiz-options">
-              <button
-                class="quiz-option"
-                data-value="a"
-                onclick="selectOption(this)"
-              >
-                <span class="quiz-option-radio"></span>
-                提高日預算至 NT$4,000（CPA 的 10 倍）並合併相似廣告組
-              </button>
-              <button
-                class="quiz-option"
-                data-value="b"
-                onclick="selectOption(this)"
-              >
-                <span class="quiz-option-radio"></span>
-                降低日預算到 NT$800，減少虧損等 AI 慢慢學
-              </button>
-              <button
-                class="quiz-option"
-                data-value="c"
-                onclick="selectOption(this)"
-              >
-                <span class="quiz-option-radio"></span>
-                拆成 3 個更小的廣告組分別測試不同受眾
-              </button>
-            </div>
-            <div class="quiz-feedback"></div>
-          </div>
-
-          <!-- Q3 -->
-          <div
-            class="quiz-question-block scenario-block"
-            data-correct="c"
-            data-explanation-right="遷移到新架構應循序漸進。Phase 1 先用 70/30 分配讓新架構開始學習，經過 7-8 週逐步過渡，避免一刀切造成業績斷崖。"
-            data-explanation-wrong="帳戶遷移的核心原則是漸進式轉移。直接砍掉舊架構會失去穩定的業績來源，而不做新架構則無法享受 AI 升級的紅利。"
-          >
-            <div class="scenario-context">
-              <span class="scenario-label">情境</span>
-              <p>
-                你的舊帳戶架構有 8 個 Campaign、每月穩定產出 ROAS
-                2.5。你想遷移到精簡的新架構，但擔心影響現有業績。
-              </p>
-            </div>
-            <div class="quiz-question">Q3：最安全的遷移方式是？</div>
-            <div class="quiz-options">
-              <button
-                class="quiz-option"
-                data-value="a"
-                onclick="selectOption(this)"
-              >
-                <span class="quiz-option-radio"></span>
-                直接關掉所有舊 Campaign，全部預算轉到新架構
-              </button>
-              <button
-                class="quiz-option"
-                data-value="b"
-                onclick="selectOption(this)"
-              >
-                <span class="quiz-option-radio"></span>
-                維持舊架構不變，等自然衰退後再考慮
-              </button>
-              <button
-                class="quiz-option"
-                data-value="c"
-                onclick="selectOption(this)"
-              >
-                <span class="quiz-option-radio"></span>
-                四階段漸進遷移：先 70/30，再 50/50，逐步過渡到新架構
-              </button>
-            </div>
-            <div class="quiz-feedback"></div>
-          </div>
-
-          <div style="margin-top: var(--space-6)">
-            <button class="quiz-check-btn" onclick="checkQuiz('quiz-module5')">
-              送出答案
-            </button>
-            <button class="quiz-reset-btn" onclick="resetQuiz('quiz-module5')">
-              重新作答
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.module-body -->
-  </div>
-  <!-- /.module-content -->
-</section>
   </main>
+
+  <!-- ── EMAIL GATE — 解鎖實戰篇 ─────────────────────────────── -->
+  <div id="unlock" style="
+    background: var(--color-bg-warm);
+    padding: var(--space-16) var(--space-6);
+    text-align: center;
+    border-top: 1px solid var(--color-border-light);
+  ">
+    <div style="max-width: var(--content-width); margin: 0 auto;">
+      <div class="animate-in">
+        <p style="font-size: var(--text-5xl); margin-bottom: var(--space-2);">🔒</p>
+        <h2 style="font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; margin-bottom: var(--space-3);">解鎖實戰篇</h2>
+        <p style="color: var(--color-text-secondary); max-width: 480px; margin: 0 auto var(--space-8); font-size: var(--text-base);">
+          留下 Email，免費取得「創意即定位」與「預算與擴量」完整課程連結。
+        </p>
+      </div>
+
+      <form class="animate-in bottom-cta-form" onsubmit="handleUnlock(event, 'bottom')" style="max-width: 400px; margin: 0 auto;">
+        <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
+          <input type="email" required placeholder="you@example.com" class="unlock-email-input" style="
+            flex: 1; padding: var(--space-3) var(--space-4);
+            border: 2px solid var(--color-border); border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: var(--text-base);
+            background: var(--color-surface); color: var(--color-text); outline: none;
+          ">
+          <button type="submit" style="
+            padding: var(--space-3) var(--space-6); border-radius: var(--radius-sm);
+            border: none; background: var(--color-accent); color: white;
+            font-family: var(--font-body); font-size: var(--text-base); font-weight: 600;
+            cursor: pointer; white-space: nowrap;
+          ">送出</button>
+        </div>
+      </form>
+
+      <div class="bottom-cta-success" style="display: none; margin-top: var(--space-4);">
+        <div style="
+          background: var(--color-success-light); border-radius: var(--radius-md);
+          padding: var(--space-5) var(--space-8); display: inline-block;
+        ">
+          <p style="font-size: var(--text-lg); font-weight: 600; color: var(--color-success); margin-bottom: var(--space-3);">
+            解鎖成功！
+          </p>
+          <a href="./advanced" style="
+            display: inline-block; padding: var(--space-3) var(--space-8);
+            background: var(--color-accent); color: white; border-radius: var(--radius-sm);
+            font-weight: 600; text-decoration: none;
+          ">前往實戰篇 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ───────────────────────────────────────────────── -->
+  <footer style="
+    background: #1E1E2E;
+    color: #9E9790;
+    padding: 2.5rem 1.5rem 3rem;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.8;
+  ">
+    <p style="font-family: 'Bricolage Grotesque', Georgia, serif; font-weight: 600; color: #CDD6F4; font-size: 1rem; margin-bottom: 0.75rem;">
+      Made by Liwei
+    </p>
+    <p style="margin-bottom: 0.5rem;">
+      <a href="mailto:hi@liweisia.com" style="color: #5A9DB8; text-decoration: none;">hi@liweisia.com</a>
+    </p>
+    <p style="margin-bottom: 0;">
+      <a href="https://instagram.com/liwei.s_13" target="_blank" rel="noopener" style="color: #5A9DB8; text-decoration: none;">IG / Threads @liwei.s_13</a>
+    </p>
+  </footer>
+
+  <script>
+    function handleUnlock(e, source) {
+      e.preventDefault();
+      var form = e.target;
+      var email = form.querySelector('.unlock-email-input').value.trim();
+      if (!email) return;
+      // 送出到 ConvertKit
+      var btn = form.querySelector('button');
+      if (btn) { btn.disabled = true; btn.textContent = '送出中…'; }
+      fetch('https://app.kit.com/forms/9300960/subscriptions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email_address: email })
+      }).then(function() {
+        localStorage.setItem('meta-ads-course-unlocked', 'true');
+        syncUnlockState();
+      }).catch(function() {
+        // 即使 API 失敗也解鎖，避免阻擋使用者
+        localStorage.setItem('meta-ads-course-unlocked', 'true');
+        syncUnlockState();
+      });
+    }
+    function syncUnlockState() {
+      var unlocked = localStorage.getItem('meta-ads-course-unlocked') === 'true';
+      if (!unlocked) return;
+      document.querySelectorAll('.mid-cta-form, .bottom-cta-form').forEach(function(f) { f.style.display = 'none'; });
+      document.querySelectorAll('.mid-cta-success, .bottom-cta-success').forEach(function(s) { s.style.display = 'block'; });
+    }
+    document.addEventListener('DOMContentLoaded', syncUnlockState);
+  </script>
 
 </body>
 </html>
