@@ -1,0 +1,735 @@
+<!-- ============================================================
+     MODULE 1 — AI 接管一切
+     ============================================================ -->
+<section class="module" id="module-1" style="background: var(--color-bg)">
+  <div class="module-content">
+    <!-- ── HEADER ─────────────────────────────────────────────── -->
+    <header class="module-header animate-in">
+      <span class="module-number">01</span>
+      <h2 class="module-title">AI 接管一切</h2>
+      <p class="module-subtitle">
+        Andromeda + GEM 雙引擎如何改變 Meta 廣告的遊戲規則
+      </p>
+    </header>
+
+    <div class="module-body">
+      <!-- ── SCREEN 1：比喻導入 ───────────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">從手動駕駛到全自動駕駛</h3>
+        <p>
+          想像你正在開車。2024
+          年以前，你得自己握方向盤、踩油門、判斷路況——這就是手動投放廣告的時代。
+        </p>
+        <p>
+          2026 年，Meta
+          要你當乘客就好。告訴車子目的地（轉換目標）和加多少油（預算），剩下的交給
+          AI。
+        </p>
+
+        <div class="icon-rows">
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-error-light)"
+            >
+              🚗
+            </div>
+            <div>
+              <strong>過去：手動駕駛</strong>
+              <p>廣告主全程操控受眾、版位、出價，每個細節都要自己調整。</p>
+            </div>
+          </div>
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-info-light)"
+            >
+              🤖
+            </div>
+            <div>
+              <strong>現在：輔助駕駛</strong>
+              <p>半自動化工具幫忙，但你還是要坐在駕駛座監督。</p>
+            </div>
+          </div>
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-success-light)"
+            >
+              🛸
+            </div>
+            <div>
+              <strong>2026：全自動駕駛</strong>
+              <p>AI 端對端接管，廣告主只需提供產品 URL + 預算。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 2：Andromeda + GEM 雙引擎 ─────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">雙引擎核心：Andromeda + GEM</h3>
+        <p>
+          2026 年 Meta 廣告投遞系統由兩個 AI
+          引擎驅動。它們就像自動駕駛汽車的「眼睛」和「大腦」。
+        </p>
+
+        <div class="pattern-cards">
+          <div
+            class="pattern-card"
+            style="border-top-color: var(--color-actor-2)"
+          >
+            <div
+              class="pattern-icon"
+              style="background: var(--color-info-light)"
+            >
+              👁️
+            </div>
+            <div class="pattern-title">
+              <span
+                class="term"
+                data-definition="Meta 的廣告檢索引擎，能在毫秒內從數千萬廣告中找出最佳候選"
+                >Andromeda</span
+              >
+              — 眼睛
+            </div>
+            <p class="pattern-desc">
+              廣告檢索引擎，搭載 NVIDIA
+              GH200，從數千萬廣告中毫秒篩選候選。比舊系統快 100 倍。
+            </p>
+          </div>
+          <div
+            class="pattern-card"
+            style="border-top-color: var(--color-actor-3)"
+          >
+            <div
+              class="pattern-icon"
+              style="background: rgba(123, 109, 170, 0.12)"
+            >
+              🧠
+            </div>
+            <div class="pattern-title">
+              <span
+                class="term"
+                data-definition="Generative Recommendation Model，Meta 的生成式推薦模型，負責深度評估廣告表現"
+                >GEM</span
+              >
+              — 大腦
+            </div>
+            <p class="pattern-desc">
+              生成式推薦模型，深度評估候選廣告，預測點擊/購買可能性。比原始推薦模型高
+              4 倍準確度。
+            </p>
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <div class="callout-icon">📅</div>
+          <div class="callout-content">
+            <span class="callout-title">關鍵轉折點</span>
+            <p>
+              2026/01/09 起，Ad Set 層級的受眾比對邏輯正式棄用，全面改為
+              <span
+                class="term"
+                data-definition="從大量廣告庫中即時檢索最相關廣告的新方法，取代舊的受眾比對邏輯"
+                >Retrieval 邏輯</span
+              >。廣告不再「推送」給受眾，而是被「搜尋」出來。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 3：Group Chat Animation ───────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">看 AI 雙引擎如何投遞一則廣告</h3>
+        <p>
+          點擊「下一則」觀看 Andromeda 和 GEM
+          如何協作，把對的廣告送到對的人面前。
+        </p>
+
+        <div class="chat-window" id="chat-module1">
+          <div class="chat-messages">
+            <div
+              class="chat-message"
+              data-sender="advertiser"
+              style="display: none"
+            >
+              <div class="chat-avatar" style="background: var(--color-actor-1)">
+                廣
+              </div>
+              <div class="chat-bubble">
+                <span class="chat-sender" style="color: var(--color-actor-1)"
+                  >廣告主</span
+                >
+                <p>
+                  我要推廣新品運動鞋，目標是購買轉換，日預算
+                  NT$3,000。這是產品頁 URL 和 5 組素材。
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="chat-message"
+              data-sender="andromeda"
+              style="display: none"
+            >
+              <div class="chat-avatar" style="background: var(--color-actor-2)">
+                A
+              </div>
+              <div class="chat-bubble">
+                <span class="chat-sender" style="color: var(--color-actor-2)"
+                  >Andromeda</span
+                >
+                <p>
+                  收到！正在掃描 3,200 萬筆候選廣告庫... 0.003 秒完成。根據
+                  Retrieval 邏輯，篩出 500 組高相關候選。
+                </p>
+              </div>
+            </div>
+
+            <div class="chat-message" data-sender="gem" style="display: none">
+              <div class="chat-avatar" style="background: var(--color-actor-3)">
+                G
+              </div>
+              <div class="chat-bubble">
+                <span class="chat-sender" style="color: var(--color-actor-3)"
+                  >GEM</span
+                >
+                <p>
+                  接手！我用生成式模型深度評估這 500
+                  組候選，預測每位用戶的點擊率和購買機率。你的素材
+                  #3（影片版）對 25-34 歲女性最強。
+                </p>
+              </div>
+            </div>
+
+            <div class="chat-message" data-sender="gem" style="display: none">
+              <div class="chat-avatar" style="background: var(--color-actor-3)">
+                G
+              </div>
+              <div class="chat-bubble">
+                <span class="chat-sender" style="color: var(--color-actor-3)"
+                  >GEM</span
+                >
+                <p>
+                  另外，我自動生成了一組新背景圖 + 調整文案長度，組合出第 6
+                  組創意變體。預測 ROAS 提升 18%。
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="chat-message"
+              data-sender="andromeda"
+              style="display: none"
+            >
+              <div class="chat-avatar" style="background: var(--color-actor-2)">
+                A
+              </div>
+              <div class="chat-bubble">
+                <span class="chat-sender" style="color: var(--color-actor-2)"
+                  >Andromeda</span
+                >
+                <p>
+                  完成配對！將素材 #3 投遞到 Instagram Reels，素材 #6（AI
+                  生成版）投遞到 Facebook Feed。最佳版位已自動選定。
+                </p>
+              </div>
+            </div>
+
+            <div class="chat-message" data-sender="user" style="display: none">
+              <div class="chat-avatar" style="background: var(--color-actor-4)">
+                用
+              </div>
+              <div class="chat-bubble">
+                <span class="chat-sender" style="color: var(--color-actor-4)"
+                  >用戶小美</span
+                >
+                <p>咦，這雙鞋好好看！（點擊廣告 → 加入購物車 → 完成購買）</p>
+              </div>
+            </div>
+
+            <div
+              class="chat-message"
+              data-sender="advertiser"
+              style="display: none"
+            >
+              <div class="chat-avatar" style="background: var(--color-actor-1)">
+                廣
+              </div>
+              <div class="chat-bubble">
+                <span class="chat-sender" style="color: var(--color-actor-1)"
+                  >廣告主</span
+                >
+                <p>
+                  太好了！我什麼都沒手動調整，CPA 比上季降了 22%。AI
+                  自動駕駛真的可以！
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-typing" style="display: none">
+            <div
+              class="chat-avatar"
+              style="background: var(--color-actor-2)"
+              id="chat-module1-typing-avatar"
+            >
+              A
+            </div>
+            <div class="chat-typing-dots">
+              <div class="typing-dot"></div>
+              <div class="typing-dot"></div>
+              <div class="typing-dot"></div>
+            </div>
+          </div>
+
+          <div class="chat-controls">
+            <button class="btn chat-next-btn">下一則</button>
+            <button class="btn chat-all-btn">播放全部</button>
+            <button class="btn chat-reset-btn">重置</button>
+            <span class="chat-progress">0 / 7 messages</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 4：2026 時間線（Flow Animation）─────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">2026 關鍵時間線</h3>
+        <p>
+          從 Andromeda 部署到端對端全自動化，Meta
+          用不到兩年完成轉型。點擊「下一步」逐步瀏覽。
+        </p>
+
+        <div
+          class="flow-animation"
+          id="flow-module1"
+          data-steps='[
+          {"highlight":"flow-2024","label":"2024 年底：Andromeda 廣告檢索引擎開始部署，取代舊的候選篩選系統。","packet":false},
+          {"highlight":"flow-2025","label":"2025 年中：GEM 生成式推薦模型部署，廣告評估準確度提升 4 倍。","packet":true,"from":"2024","to":"2025"},
+          {"highlight":"flow-202601","label":"2026/01/09：Ad Set 層級受眾邏輯正式棄用，全面改為 Retrieval 邏輯。","packet":true,"from":"2025","to":"202601"},
+          {"highlight":"flow-2026q1","label":"2026 Q1：API v25.0 完全棄用舊版介面，所有廣告主強制使用新系統。","packet":true,"from":"202601","to":"2026q1"},
+          {"highlight":"flow-2026end","label":"2026 年底目標：端對端 AI 全自動化——只需產品 URL + 預算，AI 搞定一切。","packet":true,"from":"2026q1","to":"2026end"}
+        ]'
+        >
+          <div class="flow-actors">
+            <div class="flow-actor" id="flow-2024">
+              <div class="flow-actor-icon">🔍</div>
+              <span>2024 底<br />Andromeda</span>
+            </div>
+            <div class="flow-actor" id="flow-2025">
+              <div class="flow-actor-icon">🧠</div>
+              <span>2025 中<br />GEM</span>
+            </div>
+            <div class="flow-actor" id="flow-202601">
+              <div class="flow-actor-icon">🔄</div>
+              <span>2026/01<br />Retrieval</span>
+            </div>
+            <div class="flow-actor" id="flow-2026q1">
+              <div class="flow-actor-icon">⚡</div>
+              <span
+                >2026 Q1<br /><span
+                  class="term"
+                  data-definition="Application Programming Interface，讓不同系統互相溝通的「翻譯官」"
+                  >API</span
+                >
+                v25.0</span
+              >
+            </div>
+            <div class="flow-actor" id="flow-2026end">
+              <div class="flow-actor-icon">🛸</div>
+              <span>2026 底<br />全自動化</span>
+            </div>
+          </div>
+          <div class="flow-packet"></div>
+          <div class="flow-step-label">點擊「下一步」開始瀏覽時間線</div>
+          <div class="flow-controls">
+            <button class="btn btn-primary flow-next-btn">下一步</button>
+            <button class="btn flow-reset-btn">重置</button>
+            <span class="flow-progress">Step 0 / 5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 5：Advantage+ 產品線（Pattern Cards）──────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">
+          <span
+            class="term"
+            data-definition="Meta 的 AI 自動化廣告產品線總稱，包含 Sales、Audience、Creative 等子產品"
+            >Advantage+</span
+          >
+          產品線全景
+        </h3>
+        <p>
+          Advantage+ 是 Meta 把所有 AI 自動化功能打包的品牌。2026
+          年，四大子產品構成完整的「自動駕駛系統」。
+        </p>
+
+        <div class="pattern-cards stagger-children">
+          <div
+            class="pattern-card animate-in"
+            style="border-top-color: var(--color-actor-1)"
+          >
+            <div
+              class="pattern-icon"
+              style="background: var(--color-accent-light)"
+            >
+              🛒
+            </div>
+            <div class="pattern-title">Advantage+ Sales</div>
+            <p class="pattern-desc">
+              原
+              <span
+                class="term"
+                data-definition="Advantage+ Shopping Campaigns，電商專用的全自動廣告活動"
+                >ASC</span
+              >。強制開啟
+              <span
+                class="term"
+                data-definition="Campaign Budget Optimization，讓 Meta AI 自動在廣告組之間分配預算"
+                >CBO</span
+              >
+              + A+ Audience + A+ Placements，官方數據
+              <span
+                class="term"
+                data-definition="Cost Per Acquisition，每次獲取一個轉換（如購買）的成本"
+                >CPA</span
+              >
+              降低 20%。
+            </p>
+          </div>
+          <div
+            class="pattern-card animate-in"
+            style="border-top-color: var(--color-actor-2)"
+          >
+            <div
+              class="pattern-icon"
+              style="background: var(--color-info-light)"
+            >
+              🎯
+            </div>
+            <div class="pattern-title">Advantage+ Audience</div>
+            <p class="pattern-desc">
+              你設定的受眾只是「建議」，AI
+              會自動擴展到更有可能轉換的人群。受眾定義權從廣告主移交 AI。
+            </p>
+          </div>
+          <div
+            class="pattern-card animate-in"
+            style="border-top-color: var(--color-actor-3)"
+          >
+            <div
+              class="pattern-icon"
+              style="background: rgba(123, 109, 170, 0.12)"
+            >
+              🎨
+            </div>
+            <div class="pattern-title">Advantage+ Creative</div>
+            <p class="pattern-desc">
+              AI
+              自動生成背景、把靜態圖轉影片、擴展文案長度。每組素材自動產生多種變體測試。
+            </p>
+          </div>
+          <div
+            class="pattern-card animate-in"
+            style="border-top-color: var(--color-actor-4)"
+          >
+            <div
+              class="pattern-icon"
+              style="background: rgba(212, 168, 67, 0.12)"
+            >
+              📋
+            </div>
+            <div class="pattern-title">Advantage+ Leads</div>
+            <p class="pattern-desc">
+              名單型廣告也加入全自動化行列，AI 優化表單填寫流程與受眾配對。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 6：官方三支柱 ─────────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">Meta 官方三支柱策略</h3>
+        <p>
+          即使 AI
+          接管投遞，廣告主仍需掌握三大核心。這是你在自動駕駛時代的「安全帶」。
+        </p>
+
+        <div class="step-cards">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Creative 創意素材</strong>
+              <p>
+                提供 8-15 組多元素材，讓 AI
+                有足夠變體可測試。靜態圖、影片、輪播混搭效果最佳。
+              </p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>Campaign Structure 活動架構</strong>
+              <p>
+                精簡為 1-2 個活動，避免受眾重疊。讓 AI 有最大預算池進行優化。
+              </p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>Data Accuracy 數據準確度</strong>
+              <p>
+                <span
+                  class="term"
+                  data-definition="Meta 安裝在網站上的追蹤程式碼，用來記錄訪客行為"
+                  >Pixel</span
+                >
+                +
+                <span
+                  class="term"
+                  data-definition="Conversions API，把你的伺服器端轉換數據直接傳給 Meta 的技術"
+                  >CAPI</span
+                >
+                雙重追蹤，確保 AI 收到正確的轉換訊號。垃圾數據進，垃圾結果出。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 7：AI 創意工具 ────────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">2026 AI 創意工具箱</h3>
+        <p>Meta 把創意生產線也交給 AI。以下是你不用再外包的事。</p>
+
+        <div class="icon-rows">
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-accent-light)"
+            >
+              🎬
+            </div>
+            <div>
+              <strong>靜態轉影片</strong>
+              <p>上傳一張產品圖，AI 自動生成 6 秒短影片，含動態轉場效果。</p>
+            </div>
+          </div>
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-info-light)"
+            >
+              🎙️
+            </div>
+            <div>
+              <strong>AI 配音 + 音樂</strong>
+              <p>自動為影片配上語音旁白和背景音樂，支援多語言。</p>
+            </div>
+          </div>
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-success-light)"
+            >
+              👤
+            </div>
+            <div>
+              <strong>人物形象生成</strong>
+              <p>AI 生成虛擬代言人形象，免拍攝、免模特費用。</p>
+            </div>
+          </div>
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: rgba(212, 168, 67, 0.12)"
+            >
+              📊
+            </div>
+            <div>
+              <strong>效能預測</strong>
+              <p>素材上傳前就能預估點擊率和轉換率，省下無效測試預算。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 8：反直覺發現（Callout Box）──────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">等等，AI 真的萬能嗎？</h3>
+        <p>全自動化聽起來很美好，但數據告訴我們要保持警覺。</p>
+
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <span class="callout-title">反直覺發現：ASC 不一定比手動好</span>
+            <p>
+              獨立測量公司 Haus 在 640 檔增量實驗中發現，58%
+              的案例手動設定活動的表現優於
+              <span
+                class="term"
+                data-definition="Advantage+ Shopping Campaigns，電商專用的全自動廣告活動"
+                >ASC</span
+              >。原因可能是：你的產品類別、客單價或銷售週期不適合全自動化。
+            </p>
+          </div>
+        </div>
+
+        <div class="callout callout-accent">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <span class="callout-title">實戰建議</span>
+            <p>
+              永遠用 A/B 測試驗證。開一個 ASC 活動、一個手動活動，跑 2 週比較
+              <span
+                class="term"
+                data-definition="Return On Ad Spend，每花一塊廣告費帶回多少營收"
+                >ROAS</span
+              >
+              和增量轉換。數據說話，不盲信 AI。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 9：Quiz ───────────────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">測試你的理解</h3>
+
+        <div class="quiz-container" id="quiz-module1">
+          <!-- Q1 -->
+          <div
+            class="quiz-question-block"
+            data-correct="b"
+            data-explanation-right="Andromeda 負責快速檢索候選廣告，GEM 負責深度評估和推薦——一個是眼睛，一個是大腦。"
+            data-explanation-wrong="Andromeda 是檢索引擎（快速篩選），GEM 是生成式推薦模型（深度評估）。兩者分工不同。"
+          >
+            <div class="quiz-question">
+              Q1：Andromeda 和 GEM 在廣告投遞中各自扮演什麼角色？
+            </div>
+            <div class="quiz-options">
+              <button
+                class="quiz-option"
+                data-value="a"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                Andromeda 負責生成創意素材，GEM 負責設定受眾
+              </button>
+              <button
+                class="quiz-option"
+                data-value="b"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                Andromeda 從數千萬廣告中快速檢索候選，GEM 深度評估並推薦最佳配對
+              </button>
+              <button
+                class="quiz-option"
+                data-value="c"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                兩者功能相同，只是部署在不同伺服器上做備援
+              </button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- Q2 -->
+          <div
+            class="quiz-question-block"
+            data-correct="c"
+            data-explanation-right="Haus 的 640 檔實驗顯示 58% 手動更好。正確做法是兩者並行測試，讓數據說話。"
+            data-explanation-wrong="獨立實驗數據顯示 ASC 不一定更好（58% 案例手動勝出）。最佳策略是 A/B 測試，不盲信任何一方。"
+          >
+            <div class="quiz-question">
+              Q2：關於 Advantage+ Shopping Campaigns (ASC)，以下哪個說法最正確？
+            </div>
+            <div class="quiz-options">
+              <button
+                class="quiz-option"
+                data-value="a"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                ASC 在所有情境下都比手動設定表現更好
+              </button>
+              <button
+                class="quiz-option"
+                data-value="b"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                ASC 已被 Meta 棄用，不建議再使用
+              </button>
+              <button
+                class="quiz-option"
+                data-value="c"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                ASC 不一定比手動好，應用 A/B 測試驗證你的情境
+              </button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- Q3 -->
+          <div
+            class="quiz-question-block"
+            data-correct="b"
+            data-explanation-right="Meta 官方三支柱是 Creative（8-15 組素材）、Campaign Structure（精簡 1-2 個活動）、Data Accuracy（Pixel + CAPI）。AI 再強也需要好素材和正確數據。"
+            data-explanation-wrong="三支柱是 Creative、Campaign Structure、Data Accuracy。預算金額不在三支柱中——它是基本設定，不是策略支柱。"
+          >
+            <div class="quiz-question">
+              Q3：在 AI 全自動化時代，Meta
+              建議廣告主聚焦的「三支柱」不包含以下哪一項？
+            </div>
+            <div class="quiz-options">
+              <button
+                class="quiz-option"
+                data-value="a"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                Creative 創意素材（提供 8-15 組多元素材）
+              </button>
+              <button
+                class="quiz-option"
+                data-value="b"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                Budget Maximization 預算最大化（盡可能提高日預算）
+              </button>
+              <button
+                class="quiz-option"
+                data-value="c"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                Data Accuracy 數據準確度（Pixel + CAPI 雙重追蹤）
+              </button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div style="margin-top: var(--space-6)">
+            <button class="quiz-check-btn" onclick="checkQuiz('quiz-module1')">
+              送出答案
+            </button>
+            <button class="quiz-reset-btn" onclick="resetQuiz('quiz-module1')">
+              重新作答
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.module-body -->
+  </div>
+  <!-- /.module-content -->
+</section>

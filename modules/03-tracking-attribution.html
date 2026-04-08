@@ -1,0 +1,691 @@
+<!-- ============================================================
+     MODULE 3 — 數據追蹤與歸因
+     ============================================================ -->
+<section class="module" id="module-3" style="background: var(--color-bg)">
+  <div class="module-content">
+    <!-- ── HEADER ─────────────────────────────────────────────── -->
+    <header class="module-header animate-in">
+      <span class="module-number">03</span>
+      <h2 class="module-title">數據追蹤與歸因</h2>
+      <p class="module-subtitle">沒有好數據，再強的 AI 也是瞎子</p>
+    </header>
+
+    <div class="module-body">
+      <!-- ── SCREEN 1：偵探比喻導入 ──────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">偵探破案：你的數據追蹤夠完整嗎？</h3>
+        <p>
+          數據追蹤就像偵探收集證據。
+          <span
+            class="term"
+            data-definition="Meta 安裝在網站上的追蹤程式碼，用來記錄訪客行為"
+            >Pixel</span
+          >
+          是裝在嫌疑人家門口的監視器——只能拍到誰進出；
+          <span
+            class="term"
+            data-definition="Conversions API，把你的伺服器端轉換數據直接傳給 Meta 的技術"
+            >CAPI</span
+          >
+          是線人回報的情報——知道裡面發生什麼事。
+        </p>
+        <p>
+          兩者結合才能還原完整犯罪現場（用戶旅程）。而
+          <span
+            class="term"
+            data-definition="Event Match Quality，Meta 衡量你傳回的事件數據品質的分數（1-10 分）"
+            >EMQ</span
+          >
+          就是你這個偵探的「破案率」，分數越高代表你收集的證據越完整。
+        </p>
+
+        <div class="icon-rows">
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-info-light)"
+            >
+              🎥
+            </div>
+            <div>
+              <strong>Pixel = 監視器</strong>
+              <p>
+                裝在瀏覽器端，記錄誰造訪、點了什麼。但被廣告阻擋器和 iOS
+                隱私政策影響。
+              </p>
+            </div>
+          </div>
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-success-light)"
+            >
+              🕵️
+            </div>
+            <div>
+              <strong>CAPI = 線人情報</strong>
+              <p>
+                從伺服器端直接傳送，不受瀏覽器限制。能補回 Pixel 漏掉的 20-30%
+                數據。
+              </p>
+            </div>
+          </div>
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-accent-light)"
+            >
+              📊
+            </div>
+            <div>
+              <strong>EMQ = 破案率</strong>
+              <p>
+                分數 1-10，越高代表 Meta 能配對越多用戶身份。目標至少 7 分以上。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 2：歸因變更時間線 ────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">2026 歸因重大變更時間線</h3>
+        <p>
+          Meta 在 2026 年對
+          <span
+            class="term"
+            data-definition="Attribution，判斷一次轉換（如購買）應該歸功於哪個廣告的方法"
+            >歸因</span
+          >
+          機制進行了三波重大調整，直接影響你看到的轉換數據。
+        </p>
+
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <span class="callout-title">歸因窗口移除影響</span>
+            <p>
+              2026/01/12 移除 7d_view 和 28d_view
+              <span
+                class="term"
+                data-definition="Attribution Window，轉換發生後往回追溯的時間範圍，如「7天點擊」代表點擊後7天內的購買都算"
+                >歸因窗口</span
+              >後，部分廣告主轉換數一夜下降
+              15-40%。如果你的報表數字突然變難看，先別急著砍預算——可能只是計算方式改了。
+            </p>
+          </div>
+        </div>
+
+        <div class="step-cards stagger-children">
+          <div class="step-card animate-in">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>2026/01/12 — 移除觀看歸因窗口</strong>
+              <p>
+                7d_view、28d_view
+                正式移除。只看不點的「觀看歸因」不再計入，部分廣告主轉換數下降
+                15-40%。
+              </p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>2026/03 — 點擊歸因收窄 + 新增互動歸因</strong>
+              <p>
+                Click-Through 僅計「連結點擊」；新增
+                <span
+                  class="term"
+                  data-definition="Meta 2026 新增的歸因模式，追蹤用戶與廣告互動（按讚、留言）後的轉換"
+                  >Engage-Through Attribution</span
+                >，按讚和留言不再算點擊歸因，改為獨立追蹤。
+              </p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>2026/03 — 增量歸因可選用</strong>
+              <p>
+                <span
+                  class="term"
+                  data-definition="增量歸因，比較有看到廣告 vs 沒看到廣告的人，衡量廣告的「真實」效果"
+                  >Incremental Attribution</span
+                >
+                上線：15% 對照組 vs 85% 實驗組，衡量廣告的「真實增量效果」。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 3：Flow Animation — Pixel + CAPI 雙軌追蹤 ── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">Pixel + CAPI 雙軌追蹤數據流</h3>
+        <p>
+          同時部署 Pixel + CAPI 可帶來 12%
+          歸因提升。點擊「下一步」看完整數據流。
+        </p>
+
+        <div
+          class="flow-animation"
+          id="flow-module3"
+          data-steps='[
+          {"highlight":"flow-user","label":"用戶點擊廣告，進入你的網站。","packet":false},
+          {"highlight":"flow-pixel","label":"瀏覽器觸發 Meta Pixel，記錄頁面瀏覽和事件。","packet":true,"from":"flow-user","to":"flow-pixel"},
+          {"highlight":"flow-server","label":"網站伺服器同步觸發 CAPI，傳送相同事件到 Meta。","packet":true,"from":"flow-user","to":"flow-server"},
+          {"highlight":"flow-capi","label":"CAPI 從伺服器端直接傳送數據，不受瀏覽器限制。","packet":true,"from":"flow-server","to":"flow-capi"},
+          {"highlight":"flow-meta","label":"Meta 廣告系統同時收到 Pixel 和 CAPI 兩份數據。","packet":true,"from":"flow-pixel","to":"flow-meta"},
+          {"highlight":"flow-meta","label":"用相同的 event_id 去重，避免重複計算同一事件。歸因完成！","packet":false}
+        ]'
+        >
+          <div class="flow-actors">
+            <div class="flow-actor" id="flow-user">
+              <div class="flow-actor-icon">👤</div>
+              <span>用戶<br />瀏覽器</span>
+            </div>
+            <div class="flow-actor" id="flow-pixel">
+              <div class="flow-actor-icon">📡</div>
+              <span>Meta<br />Pixel</span>
+            </div>
+            <div class="flow-actor" id="flow-server">
+              <div class="flow-actor-icon">🖥️</div>
+              <span>網站<br />伺服器</span>
+            </div>
+            <div class="flow-actor" id="flow-capi">
+              <div class="flow-actor-icon">🔗</div>
+              <span>CAPI</span>
+            </div>
+            <div class="flow-actor" id="flow-meta">
+              <div class="flow-actor-icon">⚙️</div>
+              <span>Meta<br />廣告系統</span>
+            </div>
+          </div>
+          <div class="flow-packet"></div>
+          <div class="flow-step-label">
+            點擊「下一步」觀看 Pixel + CAPI 雙軌追蹤流程
+          </div>
+          <div class="flow-controls">
+            <button class="btn btn-primary flow-next-btn">下一步</button>
+            <button class="btn flow-reset-btn">重置</button>
+            <span class="flow-progress">Step 0 / 6</span>
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <div class="callout-icon">🔑</div>
+          <div class="callout-content">
+            <span class="callout-title">關鍵：event_id 去重</span>
+            <p>
+              Pixel 和 CAPI 傳送同一事件時，必須使用相同的
+              <span
+                class="term"
+                data-definition="事件唯一識別碼，Pixel 和 CAPI 傳送同一事件時用來避免重複計算"
+                >event_id</span
+              >。Meta 會自動去重，確保一次購買不會被計算兩次。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 4：Pattern Cards — CAPI 整合方式 ─────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">三種 CAPI 整合方式比較</h3>
+        <p>依據你的技術能力和需求，選擇最適合的整合方式。速度與彈性的取捨。</p>
+
+        <div class="pattern-cards stagger-children">
+          <div
+            class="pattern-card animate-in"
+            style="border-top-color: var(--color-success)"
+          >
+            <div
+              class="pattern-icon"
+              style="
+                background: var(--color-success-light);
+                color: var(--color-success);
+              "
+            >
+              🚀
+            </div>
+            <div class="pattern-title">合作夥伴整合</div>
+            <p class="pattern-desc">
+              透過 Shopify、WordPress 等平台一鍵啟用。最快上線（30
+              分鐘內），適合非技術背景。推薦首選。
+            </p>
+          </div>
+          <div
+            class="pattern-card animate-in"
+            style="border-top-color: var(--color-info)"
+          >
+            <div
+              class="pattern-icon"
+              style="
+                background: var(--color-info-light);
+                color: var(--color-info);
+              "
+            >
+              🌐
+            </div>
+            <div class="pattern-title">CAPI Gateway</div>
+            <p class="pattern-desc">
+              Meta
+              提供的雲端中繼服務，不需修改伺服器程式碼。中等難度，適合有基本技術能力的團隊。
+            </p>
+          </div>
+          <div
+            class="pattern-card animate-in"
+            style="border-top-color: var(--color-accent)"
+          >
+            <div
+              class="pattern-icon"
+              style="
+                background: var(--color-accent-light);
+                color: var(--color-accent);
+              "
+            >
+              ⚙️
+            </div>
+            <div class="pattern-title">直接 API</div>
+            <p class="pattern-desc">
+              自行開發伺服器端整合。彈性最高、可完全客製化，但需要工程師資源。適合大型電商。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 5：Step Cards — EMQ 分數優化漏斗 ─────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">EMQ 分數優化漏斗</h3>
+        <p>
+          EMQ
+          分數直接影響你的廣告成效。從上層到下層，越接近購買的事件需要越高的配對品質。
+        </p>
+
+        <div class="step-cards stagger-children">
+          <div class="step-card animate-in">
+            <div class="step-num" style="background: var(--color-info)">上</div>
+            <div class="step-body">
+              <strong>Page View — 目標 EMQ 6+</strong>
+              <p>頁面瀏覽事件。基礎追蹤層，確保至少能辨識大部分訪客身份。</p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num" style="background: var(--color-actor-4)">
+              中
+            </div>
+            <div class="step-body">
+              <strong>Add to Cart — 目標 EMQ 7+</strong>
+              <p>
+                加入購物車事件。這些用戶有明確購買意圖，需要更精準的身份配對。
+              </p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num" style="background: var(--color-success)">
+              下
+            </div>
+            <div class="step-body">
+              <strong>Purchase — 目標 EMQ 8+</strong>
+              <p>
+                購買事件。最關鍵的轉換訊號，EMQ 必須最高，才能讓 AI 精準學習。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="badge-list">
+          <div class="badge-item">
+            <span class="badge-code">EMQ 8.6 → 9.3</span>
+            <span class="badge-desc">僅提升 0.7 分就帶來以下三大改善</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-code">CPA -18%</span>
+            <span class="badge-desc">每次轉換成本降低 18%</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-code">配對率 +24%</span>
+            <span class="badge-desc">用戶身份配對率提升 24%</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-code">ROAS +22%</span>
+            <span class="badge-desc">廣告投資報酬率提升 22%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 6：Translation Block — EMQ 七大參數 ──────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">EMQ 七大關鍵參數</h3>
+        <p>
+          傳送越多參數，Meta 越能精準配對用戶身份。所有個人資料傳送前必須經過
+          <span
+            class="term"
+            data-definition="一種加密演算法，把個人資料變成無法反推的亂碼字串，保護隱私"
+            >SHA-256</span
+          >
+          雜湊加密。
+        </p>
+
+        <div class="translation-block">
+          <div class="translation-code">
+            <span class="translation-label">程式碼</span>
+            <span class="code-comment"
+              >// EMQ 七大關鍵參數（傳送前需 SHA-256 雜湊）</span
+            >
+            <span class="code-property">em</span
+            ><span class="code-operator">:</span>
+            <span class="code-string">"user@email.com"</span>,
+            <span class="code-comment">// 電子郵件</span>
+            <span class="code-property">ph</span
+            ><span class="code-operator">:</span>
+            <span class="code-string">"0912345678"</span>,
+            <span class="code-comment">// 電話號碼</span>
+            <span class="code-property">fn</span
+            ><span class="code-operator">:</span>
+            <span class="code-string">"王"</span>,
+            <span class="code-comment">// 姓氏</span>
+            <span class="code-property">ln</span
+            ><span class="code-operator">:</span>
+            <span class="code-string">"小明"</span>,
+            <span class="code-comment">// 名字</span>
+            <span class="code-property">ct</span
+            ><span class="code-operator">:</span>
+            <span class="code-string">"台北"</span>,
+            <span class="code-comment">// 城市</span>
+            <span class="code-property">st</span
+            ><span class="code-operator">:</span>
+            <span class="code-string">"台灣"</span>,
+            <span class="code-comment">// 州/省</span>
+            <span class="code-property">fbc</span
+            ><span class="code-operator">:</span>
+            <span class="code-string">"fb.1.123456789"</span>
+            <span class="code-comment">// Facebook Click ID</span>
+          </div>
+          <div class="translation-english">
+            <span class="translation-label">白話翻譯</span>
+            <div class="translation-lines">
+              <div class="tl">
+                <strong>em（電子郵件）</strong>：配對率最高的參數，幾乎必填。
+              </div>
+              <div class="tl">
+                <strong>ph（電話號碼）</strong
+                >：台灣用戶常用手機註冊，配對效果極佳。
+              </div>
+              <div class="tl">
+                <strong>fn / ln（姓名）</strong>：輔助配對，搭配 email
+                或電話效果加乘。
+              </div>
+              <div class="tl">
+                <strong>ct / st（城市/州省）</strong
+                >：地理位置輔助，幫助排除同名同姓。
+              </div>
+              <div class="tl">
+                <strong>fbc（Facebook Click ID）</strong>：從 URL 的 fbclid
+                參數取得，串聯點擊與轉換的關鍵橋樑。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 7：AEM 簡化 ──────────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">
+          <span
+            class="term"
+            data-definition="Aggregated Event Measurement，Meta 原本限制每個網域只能追蹤 8 個事件的機制（2026 已簡化取消）"
+            >AEM</span
+          >
+          大幅簡化
+        </h3>
+        <p>
+          還記得以前要在 8 個事件中痛苦取捨嗎？2026 年，這個限制正式走入歷史。
+        </p>
+
+        <div class="callout callout-accent">
+          <div class="callout-icon">🎉</div>
+          <div class="callout-content">
+            <span class="callout-title">AEM 簡化好消息</span>
+            <p>
+              不再需要手動設定 8 個優先事件——Meta
+              現在自動聚合所有事件，無上限。網域驗證也不再是必要條件。少了一個大麻煩！
+            </p>
+          </div>
+        </div>
+
+        <div class="icon-rows">
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-error-light)"
+            >
+              ❌
+            </div>
+            <div>
+              <strong>以前：8 事件限制</strong>
+              <p>每個網域只能追蹤 8 個優先事件，排序錯了就漏追蹤關鍵轉換。</p>
+            </div>
+          </div>
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-success-light)"
+            >
+              ✅
+            </div>
+            <div>
+              <strong>現在：無上限自動聚合</strong>
+              <p>所有事件自動追蹤，不需手動排序。網域驗證也不再是必要條件。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 8：GA4 與 Meta 差異 ──────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">
+          <span
+            class="term"
+            data-definition="Google Analytics 4，Google 的網站分析工具，常與 Meta 數據對照使用"
+            >GA4</span
+          >
+          與 Meta 數據差異處理
+        </h3>
+        <p>
+          「為什麼 GA4 和 Meta
+          的轉換數字對不起來？」——這是每個廣告主都問過的問題。答案是：接受差異為常態。
+        </p>
+
+        <div class="step-cards stagger-children">
+          <div class="step-card animate-in">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>接受差異為常態</strong>
+              <p>
+                兩個平台的歸因模型、計算方式完全不同。10-30%
+                的差異是正常的，不要試圖讓數字完全一致。
+              </p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>GA4 原生匯入 Meta 廣告數據</strong>
+              <p>
+                2025/10 推出的功能，可在 GA4 中直接查看 Meta
+                廣告花費和成效，省去手動對帳的痛苦。
+              </p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>2026/03 點擊歸因收窄有助縮小差距</strong>
+              <p>
+                Meta 收窄點擊歸因定義後，與 GA4
+                的「最終點擊」模型更接近，兩邊數字差距可望縮小。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 9：Quiz ──────────────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">隨堂測驗</h3>
+
+        <div class="quiz-container" id="quiz-module3">
+          <!-- 問題 1 -->
+          <div
+            class="quiz-question-block scenario-block"
+            data-correct="c"
+            data-explanation-right="同時部署 Pixel + CAPI 可帶來 12% 歸因提升。Pixel 捕捉瀏覽器端行為，CAPI 補回伺服器端數據，兩者用 event_id 去重，缺一不可。"
+            data-explanation-wrong="只部署其中一個都會漏掉部分數據。Pixel 會被廣告阻擋器影響，只靠 CAPI 則缺少即時瀏覽器端互動數據。正確答案是兩者搭配使用。"
+          >
+            <div class="scenario-context">
+              <span class="scenario-label">情境</span>
+              <p>
+                你的工程師說：「我們已經裝了 Pixel，CAPI
+                太麻煩就不用了吧？」你要如何回應？
+              </p>
+            </div>
+            <div class="quiz-question">
+              關於 Pixel 和 CAPI 的部署策略，以下哪個說法最正確？
+            </div>
+            <div class="quiz-options">
+              <button
+                class="quiz-option"
+                data-value="a"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                有 Pixel 就夠了，CAPI 是多餘的
+              </button>
+              <button
+                class="quiz-option"
+                data-value="b"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                CAPI 比 Pixel 好，應該只用 CAPI 取代 Pixel
+              </button>
+              <button
+                class="quiz-option"
+                data-value="c"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                必須同時部署 Pixel + CAPI，搭配 event_id 去重，可帶來 12%
+                歸因提升
+              </button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- 問題 2 -->
+          <div
+            class="quiz-question-block scenario-block"
+            data-correct="b"
+            data-explanation-right="Purchase 是最關鍵的轉換事件，EMQ 目標 8+。實際案例顯示，EMQ 從 8.6 提升到 9.3 就能讓 CPA 降低 18%、ROAS 提升 22%。"
+            data-explanation-wrong="Purchase 事件的 EMQ 目標是 8+，不是 6 或 10。上層 Page View 目標 6+，中層 Add to Cart 目標 7+，越接近購買的事件需要越高分。"
+          >
+            <div class="scenario-context">
+              <span class="scenario-label">情境</span>
+              <p>
+                你在 Meta 事件管理工具中查看 EMQ 分數，發現 Purchase 事件的 EMQ
+                只有 5.2 分。你的優化目標應該是多少？
+              </p>
+            </div>
+            <div class="quiz-question">
+              Purchase 事件的 EMQ 分數目標應該是多少？
+            </div>
+            <div class="quiz-options">
+              <button
+                class="quiz-option"
+                data-value="a"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                6 分以上就夠了
+              </button>
+              <button
+                class="quiz-option"
+                data-value="b"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                8 分以上
+              </button>
+              <button
+                class="quiz-option"
+                data-value="c"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                必須達到滿分 10 分
+              </button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- 問題 3 -->
+          <div
+            class="quiz-question-block scenario-block"
+            data-correct="a"
+            data-explanation-right="2026/01/12 移除了 7d_view 和 28d_view 歸因窗口，導致那些依賴觀看歸因的廣告主轉換數大幅下降 15-40%。這不代表廣告變差了，而是計算方式改了。"
+            data-explanation-wrong="2026 年初移除的是觀看歸因窗口（7d_view、28d_view），不是點擊歸因。這代表「只看沒點」的行為不再被計入轉換，造成帳面數字下降。"
+          >
+            <div class="scenario-context">
+              <span class="scenario-label">情境</span>
+              <p>
+                2026 年 1 月中旬，你的客戶緊急來電：「我的廣告轉換數一夜之間掉了
+                30%！是不是帳號出問題了？」你會怎麼解釋？
+              </p>
+            </div>
+            <div class="quiz-question">最可能的原因是什麼？</div>
+            <div class="quiz-options">
+              <button
+                class="quiz-option"
+                data-value="a"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                Meta
+                移除了觀看歸因窗口（7d_view、28d_view），計算方式改變導致帳面數字下降
+              </button>
+              <button
+                class="quiz-option"
+                data-value="b"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                帳號被封鎖了，需要重新申訴
+              </button>
+              <button
+                class="quiz-option"
+                data-value="c"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                競爭對手在同時段大幅加預算，搶走了所有流量
+              </button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- 按鈕 -->
+          <div style="margin-top: var(--space-6)">
+            <button class="quiz-check-btn" onclick="checkQuiz('quiz-module3')">
+              送出答案
+            </button>
+            <button class="quiz-reset-btn" onclick="resetQuiz('quiz-module3')">
+              重新作答
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.module-body -->
+  </div>
+  <!-- /.module-content -->
+</section>

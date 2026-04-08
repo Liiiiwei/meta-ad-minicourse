@@ -1,0 +1,725 @@
+<!-- ============================================================
+     MODULE 5 — 預算與擴量
+     ============================================================ -->
+<section class="module" id="module-2" style="background: var(--color-bg-warm)">
+  <div class="module-content">
+    <!-- ── MODULE HEADER ──────────────────────────────────────── -->
+    <header class="module-header animate-in">
+      <span class="module-number">02</span>
+      <h2 class="module-title">預算與擴量</h2>
+      <p class="module-subtitle">從小預算測試到大規模擴張的完整路徑</p>
+    </header>
+
+    <div class="module-body">
+      <!-- ── SCREEN 1：投資理財比喻導入 ──────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">廣告預算 = 投資理財</h3>
+        <p>
+          預算分配就像理財配置——70% 放穩定收益的定存（已驗證廣告），20%
+          放成長型基金（擴展表現好的），10% 風險投資（測試新素材）。
+        </p>
+        <p>
+          而<span
+            class="term"
+            data-definition="Learning Phase，Meta AI 需要累積約 50 次轉換來理解你的廣告最適合投給誰的期間"
+            >學習階段</span
+          >就像新開的基金需要「建倉期」——這段時間不要頻繁進出（調整預算），否則永遠建不好倉位。
+        </p>
+
+        <div class="icon-rows">
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-success-light)"
+            >
+              🏦
+            </div>
+            <div>
+              <strong>70% 定存 = 已驗證的 Winning Ads</strong>
+              <p>穩定產出、可預期回報，是帳戶的基石。</p>
+            </div>
+          </div>
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-info-light)"
+            >
+              📈
+            </div>
+            <div>
+              <strong>20% 成長基金 = 擴展表現好的廣告組</strong>
+              <p>逐步加碼、放大回報，是帳戶的成長引擎。</p>
+            </div>
+          </div>
+          <div class="icon-row">
+            <div
+              class="icon-circle"
+              style="background: var(--color-error-light)"
+            >
+              🎰
+            </div>
+            <div>
+              <strong>10% 風險投資 = 測試新素材與受眾</strong>
+              <p>高風險高報酬，找到下一個贏家的唯一方式。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 2：Pattern Cards — 出價策略 ─────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">三大出價策略選擇</h3>
+        <p>
+          不同階段、不同產品適合不同的出價策略。選錯策略，再多預算也是浪費。
+        </p>
+
+        <div class="pattern-cards stagger-children">
+          <div
+            class="pattern-card animate-in"
+            style="border-top-color: var(--color-actor-1)"
+          >
+            <div
+              class="pattern-icon"
+              style="
+                background: var(--color-accent-light);
+                color: var(--color-accent);
+              "
+            >
+              🚀
+            </div>
+            <div class="pattern-title">
+              <span
+                class="term"
+                data-definition="最低成本出價，Meta 自動以最低可能成本獲取轉換，適合不設 CPA 上限時使用"
+                >Lowest Cost</span
+              >
+            </div>
+            <p class="pattern-desc">
+              最多轉換，花完預算。適合<strong>測試期、新帳戶</strong>——讓 AI
+              自由探索，快速累積數據退出學習階段。
+            </p>
+          </div>
+          <div
+            class="pattern-card animate-in"
+            style="border-top-color: var(--color-actor-2)"
+          >
+            <div
+              class="pattern-icon"
+              style="
+                background: var(--color-info-light);
+                color: var(--color-info);
+              "
+            >
+              🎯
+            </div>
+            <div class="pattern-title">
+              <span
+                class="term"
+                data-definition="成本上限，告訴 Meta 你能接受的最高 CPA，系統會盡量控制在這個價格以下"
+                >Cost Cap</span
+              >
+            </div>
+            <p class="pattern-desc">
+              最多轉換，CPA 不超過 X。適合<strong>擴展期</strong>——已知道合理
+              CPA 範圍，想要控制成本同時放量。
+            </p>
+          </div>
+          <div
+            class="pattern-card animate-in"
+            style="border-top-color: var(--color-actor-3)"
+          >
+            <div
+              class="pattern-icon"
+              style="
+                background: rgba(123, 109, 170, 0.12);
+                color: var(--color-actor-3);
+              "
+            >
+              🔒
+            </div>
+            <div class="pattern-title">
+              <span
+                class="term"
+                data-definition="出價上限，在每次競標時設定最高出價金額，最嚴格的成本控制方式"
+                >Bid Cap</span
+              >
+            </div>
+            <p class="pattern-desc">
+              每次競標最多出 X 元。適合<strong>嚴格 ROI、高單價產品</strong
+              >——一件利潤 5,000 元以上，不容許超標。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 3：ACB 說明 ──────────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">
+          <span
+            class="term"
+            data-definition="Advantage Campaign Budget，原 CBO（Campaign Budget Optimization），Meta 自動在廣告組間分配預算"
+            >ACB</span
+          >（Advantage Campaign Budget）
+        </h3>
+        <p>
+          CBO 已更名為 ACB，讓 Meta AI
+          自動在廣告組之間分配預算。但它不是萬能的。
+        </p>
+
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <span class="callout-title">廣告組 > 5 時的陷阱</span>
+            <p>
+              ACB 在廣告組超過 5 個時可能過度集中預算在少數幾組。建議搭配
+              <span
+                class="term"
+                data-definition="最低花費限制，確保某個廣告組至少能分配到一定預算，避免被 AI 完全忽略"
+                >Minimum Spend Limit</span
+              >
+              確保每組至少分配到基本預算。
+            </p>
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <div class="callout-icon">🧪</div>
+          <div class="callout-content">
+            <span class="callout-title">A/B 測試期間用 Ad Set Budget</span>
+            <p>
+              需要公平比較不同廣告組時，改用 Ad Set Budget（手動分配），避免 ACB
+              把預算全導向其中一組，導致測試失真。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 4：Step Cards — 學習階段加速退出 ─────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">學習階段加速退出：5 個關鍵步驟</h3>
+        <p>目標是在 7 天內累積 50 次轉換。以下是加速退出的具體做法。</p>
+
+        <div class="step-cards stagger-children">
+          <div class="step-card animate-in">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>設定足夠的日預算</strong>
+              <p>
+                日預算為目標 CPA 的 5-10 倍。例如目標 CPA 為 500
+                元，日預算至少設 2,500-5,000 元。
+              </p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>合併廣告組、擴大受眾</strong>
+              <p>
+                把相似的廣告組合併，受眾範圍拉大。分散的小組永遠湊不到 50
+                次轉換。
+              </p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>精簡素材數量</strong>
+              <p>
+                每組控制在 3-6 則素材。太多素材會分散學習數據，讓 AI
+                每則都學不透。
+              </p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <strong>預算調整克制</strong>
+              <p>
+                每次調整不超過 20%，間隔至少 2-3
+                天。大幅調整會讓學習階段重置，前功盡棄。
+              </p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <strong>轉換事件降級</strong>
+              <p>
+                若 Purchase 量不夠，改用
+                <span
+                  class="term"
+                  data-definition="加入購物車事件，當 Purchase 數據量不夠訓練 AI 時，可以改用這個較上層的轉換事件"
+                  >Add to Cart</span
+                >
+                作為轉換目標，讓 AI 有足夠數據學習。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout-accent">
+          <div class="callout-icon">🇹🇼</div>
+          <div class="callout-content">
+            <span class="callout-title">台灣市場特殊考量</span>
+            <p>
+              50
+              次轉換/週在台灣市場相對難達成（市場規模小、單價高）。如果你的產品
+              Purchase 週轉換量長期低於 50，強烈建議改用 Add to Cart
+              作為最佳化事件，讓 AI 有足夠訊號學習。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 5：Translation Block — 70-20-10 框架 ────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">70-20-10 預算分配框架</h3>
+        <p>把廣告預算當投資組合管理。穩定為主、成長為輔、探索不停。</p>
+
+        <div class="translation-block">
+          <div class="translation-code">
+            <span class="translation-label">配方</span>
+            <span class="code-keyword">月預算</span>
+            <span class="code-operator">=</span>
+            <span class="code-number">NT$100,000</span>
+
+            <span class="code-property">maintain</span
+            ><span class="code-operator"> =</span>
+            <span class="code-number">70,000</span>
+            <span class="code-comment">// 已驗證的贏家廣告，穩定產出</span>
+            <span class="code-property">scale</span
+            ><span class="code-operator"> =</span>
+            <span class="code-number">20,000</span>
+            <span class="code-comment">// 表現好的放大，逐步增加預算</span>
+            <span class="code-property">test</span
+            ><span class="code-operator"> =</span>
+            <span class="code-number">10,000</span>
+            <span class="code-comment">// 新素材、新受眾、找下一個贏家</span>
+          </div>
+          <div class="translation-english">
+            <span class="translation-label">白話翻譯</span>
+            <div class="translation-lines">
+              <div class="tl">
+                <strong>Maintain 70%（NT$70,000）</strong
+                >：放你最穩定的贏家廣告，它們是帳戶的「定存」，持續產出可預期的回報。
+              </div>
+              <div class="tl">
+                <strong>Scale 20%（NT$20,000）</strong
+                >：把表現好的廣告逐步放大預算，像「成長型基金」慢慢加碼。
+              </div>
+              <div class="tl">
+                <strong>Test 10%（NT$10,000）</strong
+                >：投入新素材、新受眾、新格式的測試，像「風險投資」尋找下一個爆款。
+              </div>
+              <div class="tl">
+                <strong>關鍵原則</strong>：即使帳戶表現再好，也要維持 10%
+                的測試預算，否則一旦贏家疲勞就沒有備案。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 6：台灣市場參考值 ────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">台灣市場參考值（2026 推估）</h3>
+        <p>
+          以下是台灣 Meta 廣告的基準數據，用來評估你的帳戶表現是否在合理範圍。
+        </p>
+
+        <div class="badge-list">
+          <div class="badge-item">
+            <span class="badge-code"
+              ><span
+                class="term"
+                data-definition="Cost Per Mille，每千次曝光成本"
+                >CPM</span
+              ></span
+            >
+            <span class="badge-desc">180-450 TWD</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-code">CPC</span>
+            <span class="badge-desc">6-25 TWD</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-code">CPA</span>
+            <span class="badge-desc">350-1,600 TWD</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-code">CTR</span>
+            <span class="badge-desc">0.8%-2.5%</span>
+          </div>
+          <div class="badge-item">
+            <span class="badge-code">旺季溢價</span>
+            <span class="badge-desc">CPM 上漲 30-50%</span>
+          </div>
+        </div>
+
+        <div class="callout callout-warning">
+          <div class="callout-icon">📅</div>
+          <div class="callout-content">
+            <span class="callout-title">旺季預算規劃</span>
+            <p>
+              雙 11、聖誕節、農曆年前 CPM 會上漲 30-50%。建議旺季前 2
+              週開始暖機，並預留額外預算應對競價上升。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 7：ASC 現有客戶預算上限 ──────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">ASC 進階設定 — 現有客戶預算上限</h3>
+        <p>
+          這個設定決定 ASC 花多少預算在舊客上。注意：是「上限」不是「分配」。
+        </p>
+
+        <div class="step-cards stagger-children">
+          <div class="step-card animate-in">
+            <div class="step-num" style="background: var(--color-info)">🆕</div>
+            <div class="step-body">
+              <strong>新客獲取導向：10-20%</strong>
+              <p>大部分預算投向新客，適合品牌拓展期或新進市場。</p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num" style="background: var(--color-success)">
+              ⚖️
+            </div>
+            <div class="step-body">
+              <strong>均衡成長：25-30%（起始建議）</strong>
+              <p>新舊客兼顧，適合多數台灣中小品牌的起步設定。</p>
+            </div>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-num" style="background: var(--color-actor-4)">
+              🎉
+            </div>
+            <div class="step-body">
+              <strong>節慶促銷期：40-50%</strong>
+              <p>舊客回購意願高的促銷時段，適當提高舊客上限抓住轉換機會。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <span class="callout-title">「上限」vs「分配」的區別</span>
+            <p>
+              設定 30% 不代表一定花 30% 在舊客上。它只是告訴 Meta「最多」花到
+              30%。實際花費取決於 AI 判斷，可能遠低於上限。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 8：Flow Animation — 帳戶遷移策略 ─────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">帳戶遷移策略（四階段）</h3>
+        <p>從舊架構遷移到新架構，不能一刀切。點擊「下一步」看完整遷移時程。</p>
+
+        <div
+          class="flow-animation"
+          id="flow-module2"
+          data-steps='[
+          {"highlight":"flow-m5-phase1","label":"Phase 1（1-2 週）：舊架構 70% / 新架構 30%。先讓新架構開始學習，累積初始數據。","packet":false},
+          {"highlight":"flow-m5-phase2","label":"Phase 2（3-4 週）：舊架構 50% / 新架構 50%。新架構退出學習階段後，逐步平衡預算分配。","packet":true,"from":"m5-phase1","to":"m5-phase2"},
+          {"highlight":"flow-m5-phase3","label":"Phase 3（5-6 週）：舊架構 20-30% / 新架構 70-80%。新架構表現穩定後，大幅轉移預算。","packet":true,"from":"m5-phase2","to":"m5-phase3"},
+          {"highlight":"flow-m5-phase4","label":"Phase 4（7-8 週）：舊架構 0-10% / 新架構 90-100%。確認新架構全面優於舊架構後完成遷移。","packet":true,"from":"m5-phase3","to":"m5-phase4"}
+        ]'
+        >
+          <div class="flow-actors">
+            <div class="flow-actor" id="flow-m5-phase1">
+              <div class="flow-actor-icon">🏗️</div>
+              <span>Phase 1<br />70 / 30</span>
+            </div>
+            <div class="flow-actor" id="flow-m5-phase2">
+              <div class="flow-actor-icon">⚖️</div>
+              <span>Phase 2<br />50 / 50</span>
+            </div>
+            <div class="flow-actor" id="flow-m5-phase3">
+              <div class="flow-actor-icon">🚀</div>
+              <span>Phase 3<br />30 / 70</span>
+            </div>
+            <div class="flow-actor" id="flow-m5-phase4">
+              <div class="flow-actor-icon">✅</div>
+              <span>Phase 4<br />0-10 / 90-100</span>
+            </div>
+          </div>
+          <div class="flow-packet"></div>
+          <div class="flow-step-label">
+            點擊「下一步」開始瀏覽四階段遷移計畫
+          </div>
+          <div class="flow-controls">
+            <button class="btn btn-primary flow-next-btn">下一步</button>
+            <button class="btn flow-reset-btn">重置</button>
+            <span class="flow-progress">Step 0 / 4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 9：何時手動介入 Advantage+ ────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">何時手動介入 Advantage+</h3>
+        <p>AI 不是萬能的。出現以下信號時，你需要立即手動介入。</p>
+
+        <div class="pattern-cards stagger-children">
+          <div class="pattern-card animate-in">
+            <div
+              class="pattern-icon"
+              style="
+                background: var(--color-error-light);
+                color: var(--color-error);
+              "
+            >
+              👥
+            </div>
+            <div class="pattern-title">新客佔比 < 30%</div>
+            <p class="pattern-desc">
+              ASC 過度投遞舊客。立即降低現有客戶預算上限，強制 AI 尋找新客。
+            </p>
+          </div>
+          <div class="pattern-card animate-in">
+            <div
+              class="pattern-icon"
+              style="
+                background: var(--color-accent-light);
+                color: var(--color-accent);
+              "
+            >
+              📊
+            </div>
+            <div class="pattern-title">CPM 週增 > 25%</div>
+            <p class="pattern-desc">
+              素材疲勞或受眾飽和的信號。立即更換素材，為 AI 提供新的「武器」。
+            </p>
+          </div>
+          <div class="pattern-card animate-in">
+            <div
+              class="pattern-icon"
+              style="
+                background: var(--color-info-light);
+                color: var(--color-info);
+              "
+            >
+              ⏰
+            </div>
+            <div class="pattern-title">學習階段卡住 > 14 天</div>
+            <p class="pattern-desc">
+              AI 遲遲無法退出學習。提高預算至 CPA 的 10
+              倍，或合併廣告組集中數據。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 10：Drag-and-Drop — 出價策略配對 ─────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">動手練習：出價策略配對</h3>
+        <p>把每個情境拖到對應的最佳出價策略。</p>
+
+        <div class="dnd-container" id="dnd-module2">
+          <div class="dnd-chips">
+            <div
+              class="dnd-chip"
+              draggable="true"
+              data-answer="scenario-lowest"
+            >
+              Lowest Cost
+            </div>
+            <div class="dnd-chip" draggable="true" data-answer="scenario-cost">
+              Cost Cap
+            </div>
+            <div class="dnd-chip" draggable="true" data-answer="scenario-bid">
+              Bid Cap
+            </div>
+          </div>
+
+          <div class="dnd-zones">
+            <div class="dnd-zone" data-correct="scenario-lowest">
+              <div class="dnd-zone-label">新帳戶剛起步測試</div>
+              <div class="dnd-zone-target">Drop here</div>
+            </div>
+            <div class="dnd-zone" data-correct="scenario-cost">
+              <div class="dnd-zone-label">想要控制 CPA 不超過 500 元</div>
+              <div class="dnd-zone-target">Drop here</div>
+            </div>
+            <div class="dnd-zone" data-correct="scenario-bid">
+              <div class="dnd-zone-label">高單價精品一件利潤 5000 元</div>
+              <div class="dnd-zone-target">Drop here</div>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-6)">
+            <button class="btn btn-primary" onclick="checkDnD('dnd-module2')">
+              檢查答案
+            </button>
+            <button
+              class="btn"
+              onclick="resetDnD('dnd-module2')"
+              style="margin-left: var(--space-3)"
+            >
+              重置
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SCREEN 11：Quiz ─────────────────────────────────── -->
+      <div class="screen animate-in">
+        <h3 class="screen-heading">情境測驗</h3>
+
+        <div class="quiz-container" id="quiz-module2">
+          <!-- Q1 -->
+          <div
+            class="quiz-question-block scenario-block"
+            data-correct="b"
+            data-explanation-right="70-20-10 框架建議 70% 給已驗證的贏家廣告、20% 擴展表現好的、10% 測試新的。月預算 60K 中，Testing 應佔 6,000 元。"
+            data-explanation-wrong="70-20-10 的核心邏輯是穩定為主、測試不停。把太多預算放在測試上風險過高，但完全不測試則會在贏家疲勞時沒有備案。"
+          >
+            <div class="scenario-context">
+              <span class="scenario-label">情境</span>
+              <p>
+                你的月廣告預算為 NT$60,000，帳戶已有幾組表現穩定的贏家素材。
+                你想開始測試新素材，但不確定該分配多少預算。
+              </p>
+            </div>
+            <div class="quiz-question">
+              Q1：依據 70-20-10 框架，你的測試預算應該設為多少？
+            </div>
+            <div class="quiz-options">
+              <button
+                class="quiz-option"
+                data-value="a"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                NT$18,000（30%），越多測試越快找到贏家
+              </button>
+              <button
+                class="quiz-option"
+                data-value="b"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                NT$6,000（10%），維持穩定產出同時持續探索
+              </button>
+              <button
+                class="quiz-option"
+                data-value="c"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                NT$0，等現有素材疲勞了再測試
+              </button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- Q2 -->
+          <div
+            class="quiz-question-block scenario-block"
+            data-correct="a"
+            data-explanation-right="學習階段卡住超過 14 天，代表當前設定無法累積足夠轉換。正確做法是提高預算或合併廣告組，讓 AI 有更多數據學習。"
+            data-explanation-wrong="學習階段卡住時，降低預算或拆分更多組只會讓數據更分散。正確方向是集中資源——提高預算至 CPA 的 10 倍，或合併相似廣告組。"
+          >
+            <div class="scenario-context">
+              <span class="scenario-label">情境</span>
+              <p>
+                你的廣告組已在學習階段停留 16 天，只累積了 23 次轉換。 目標 CPA
+                為 NT$400，目前日預算設在 NT$1,500。
+              </p>
+            </div>
+            <div class="quiz-question">
+              Q2：你應該怎麼做才能加速退出學習階段？
+            </div>
+            <div class="quiz-options">
+              <button
+                class="quiz-option"
+                data-value="a"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                提高日預算至 NT$4,000（CPA 的 10 倍）並合併相似廣告組
+              </button>
+              <button
+                class="quiz-option"
+                data-value="b"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                降低日預算到 NT$800，減少虧損等 AI 慢慢學
+              </button>
+              <button
+                class="quiz-option"
+                data-value="c"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                拆成 3 個更小的廣告組分別測試不同受眾
+              </button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- Q3 -->
+          <div
+            class="quiz-question-block scenario-block"
+            data-correct="c"
+            data-explanation-right="遷移到新架構應循序漸進。Phase 1 先用 70/30 分配讓新架構開始學習，經過 7-8 週逐步過渡，避免一刀切造成業績斷崖。"
+            data-explanation-wrong="帳戶遷移的核心原則是漸進式轉移。直接砍掉舊架構會失去穩定的業績來源，而不做新架構則無法享受 AI 升級的紅利。"
+          >
+            <div class="scenario-context">
+              <span class="scenario-label">情境</span>
+              <p>
+                你的舊帳戶架構有 8 個 Campaign、每月穩定產出 ROAS
+                2.5。你想遷移到精簡的新架構，但擔心影響現有業績。
+              </p>
+            </div>
+            <div class="quiz-question">Q3：最安全的遷移方式是？</div>
+            <div class="quiz-options">
+              <button
+                class="quiz-option"
+                data-value="a"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                直接關掉所有舊 Campaign，全部預算轉到新架構
+              </button>
+              <button
+                class="quiz-option"
+                data-value="b"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                維持舊架構不變，等自然衰退後再考慮
+              </button>
+              <button
+                class="quiz-option"
+                data-value="c"
+                onclick="selectOption(this)"
+              >
+                <span class="quiz-option-radio"></span>
+                四階段漸進遷移：先 70/30，再 50/50，逐步過渡到新架構
+              </button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div style="margin-top: var(--space-6)">
+            <button class="quiz-check-btn" onclick="checkQuiz('quiz-module2')">
+              送出答案
+            </button>
+            <button class="quiz-reset-btn" onclick="resetQuiz('quiz-module2')">
+              重新作答
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.module-body -->
+  </div>
+  <!-- /.module-content -->
+</section>
